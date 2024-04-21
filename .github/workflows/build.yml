@@ -244,8 +244,8 @@ jobs:
                     platforms: ${{ env.PLATFORMS }}
                     push: ${{ github.event_name != 'pull_request' }}
                     tags: |
-                        uozi/nginx-ui:latest
-                        uozi/nginx-ui:${{ steps.get_version.outputs.VERSION }}
+                        luoweb/nginx-ui:latest
+                        luoweb/nginx-ui:${{ steps.get_version.outputs.VERSION }}
 
             -   name: Prepare Demo Dockerfile
                 run: |
@@ -260,4 +260,4 @@ jobs:
                     platforms: ${{ env.PLATFORMS }}
                     push: ${{ github.event_name != 'pull_request' }}
                     tags: |
-                        uozi/nginx-ui-demo:latest
+                        luoweb/nginx-ui-demo:latest
