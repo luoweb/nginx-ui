@@ -52,6 +52,7 @@ jobs:
                 run: |
                     corepack enable
                     corepack prepare pnpm@latest --activate
+                    pnpm install --no-frozen-lockfile
                     pnpm install
                 working-directory: app
 
