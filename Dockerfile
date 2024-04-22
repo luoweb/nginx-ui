@@ -11,6 +11,7 @@ COPY resources/docker/nginx-ui.conf /usr/etc/nginx/conf.d/nginx-ui.conf
 COPY resources/docker/nginx-ui.conf /etc/nginx/conf.d/nginx-ui.conf
 COPY nginx-ui-$TARGETOS-$TARGETARCH$TARGETVARIANT/nginx-ui /app/nginx-ui
 
+# demo start
 COPY resources/demo/demo.db /etc/nginx-ui/database.db
 COPY resources/demo/app.ini /etc/nginx-ui/app.ini
 
