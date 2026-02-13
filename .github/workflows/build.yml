@@ -418,20 +418,20 @@ jobs:
             ${{ env.DIST }}.tar.gz
             ${{ env.DIST }}.tar.gz.digest
 
-      - name: Upload to R2 using S3 API
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/dev'
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-east-1
-        run: |
-          echo "Uploading ${{ env.DIST }}.tar.gz to R2..."
-          aws s3 cp ./${{ env.DIST }}.tar.gz s3://nginx-ui-dev-build/${{ env.DIST }}.tar.gz --endpoint-url=${{ secrets.R2_S3_API_ENDPOINT }}
+      # - name: Upload to R2 using S3 API
+      #   if: github.event_name != 'pull_request' && github.ref == 'refs/heads/dev'
+      #   env:
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      #     AWS_REGION: us-east-1
+      #   run: |
+      #     echo "Uploading ${{ env.DIST }}.tar.gz to R2..."
+      #     aws s3 cp ./${{ env.DIST }}.tar.gz s3://nginx-ui-dev-build/${{ env.DIST }}.tar.gz --endpoint-url=${{ secrets.R2_S3_API_ENDPOINT }}
 
-          echo "Uploading ${{ env.DIST }}.tar.gz.digest to R2..."
-          aws s3 cp ./${{ env.DIST }}.tar.gz.digest s3://nginx-ui-dev-build/${{ env.DIST }}.tar.gz.digest --endpoint-url=${{ secrets.R2_S3_API_ENDPOINT }}
+      #     echo "Uploading ${{ env.DIST }}.tar.gz.digest to R2..."
+      #     aws s3 cp ./${{ env.DIST }}.tar.gz.digest s3://nginx-ui-dev-build/${{ env.DIST }}.tar.gz.digest --endpoint-url=${{ secrets.R2_S3_API_ENDPOINT }}
 
-          echo "Upload completed successfully"
+      #     echo "Upload completed successfully"
 
   build_macos_native:
     runs-on: macos-latest
