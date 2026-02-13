@@ -552,7 +552,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            uozi/nginx-ui
+            luoweb/nginx-ui
           tags: |
             type=schedule
             type=ref,event=branch
@@ -608,7 +608,7 @@ jobs:
           platforms: ${{ env.PLATFORMS }}
           push: 'true'
           tags: |
-            uozi/nginx-ui-demo:latest
+            luoweb/nginx-ui-demo:latest
 
   update-homebrew:
     runs-on: ubuntu-latest
