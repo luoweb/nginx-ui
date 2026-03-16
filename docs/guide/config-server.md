@@ -268,3 +268,4 @@ Deprecated in `v2.0.0-beta.37`, please use `Http.InsecureSkipVerify` instead.
 :::
 
 This option is used to skip the verification of the certificate of servers when Nginx UI sends requests to them.
+

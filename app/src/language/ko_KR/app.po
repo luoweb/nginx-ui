@@ -107,13 +107,13 @@ msgstr "{label}이(가) 클립보드에 복사되었습니다"
 msgid "* Includes nodes from group %{groupName} and manually selected nodes"
 msgstr "* 그룹 %{groupName}의 노드와 수동으로 선택한 노드 포함"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:167
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:166
 msgid ""
 "* Index files are stored in the \"log-index\" directory within your Nginx "
 "UI config path by default."
 msgstr "* 인덱스 파일은 기본적으로 NGINX UI 구성 경로 내 \"log-index\" 디렉터리에 저장됩니다."
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:217
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:215
 msgid ""
 "* Performance metrics measured on Apple M2 Pro (12-core) with 32GB RAM. "
 "Actual performance may vary based on your hardware configuration."
@@ -125,15 +125,21 @@ msgstr ""
 msgid "%{start}-%{end} of %{total} items"
 msgstr "%{total}개 항목 중 %{start}-%{end}"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:49
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:48
 msgid "1 core minimum"
 msgstr "최소 1코어"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:55
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:338
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:508
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:632
+msgid "192.168.1.1"
+msgstr "192.168.1.1"
+
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:54
 msgid "1GB RAM minimum"
 msgstr "1GB RAM 최소"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:50
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:49
 msgid "2+ cores recommended"
 msgstr "2+ 코어 권장"
 
@@ -150,7 +156,7 @@ msgstr "2FA"
 msgid "2FA Settings"
 msgstr "2FA 설정"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:56
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:55
 msgid "4GB+ RAM recommended"
 msgstr "4GB 이상 RAM 권장"
 
@@ -184,9 +190,9 @@ msgstr "작업"
 #: src/views/certificate/ACMEUser.vue:131
 #: src/views/certificate/CertificateList/certColumns.tsx:92
 #: src/views/config/configColumns.tsx:51
-#: src/views/dns/components/DNSRecordTable.vue:41
+#: src/views/dns/components/DNSRecordTable.vue:42
 #: src/views/dns/DDNSManager.vue:91 src/views/dns/DNSCredential.vue:71
-#: src/views/dns/DNSDomainList.vue:211 src/views/namespace/columns.ts:97
+#: src/views/dns/DNSDomainList.vue:217 src/views/namespace/columns.ts:97
 #: src/views/nginx_log/NginxLogList.vue:338 src/views/node/nodeColumns.tsx:96
 #: src/views/notification/notificationColumns.tsx:72
 #: src/views/preference/components/ExternalNotify/columns.tsx:85
@@ -240,7 +246,7 @@ msgstr "헤더 추가"
 msgid "Add Location"
 msgstr "위치 추가"
 
-#: src/views/dns/DNSRecordManager.vue:171
+#: src/views/dns/DNSRecordManager.vue:176
 msgid "Add Record"
 msgstr "레코드 추가"
 
@@ -248,7 +254,7 @@ msgstr "레코드 추가"
 msgid "Add Server"
 msgstr "서버 추가"
 
-#: src/routes/modules/sites.ts:26 src/views/site/site_add/SiteAdd.vue:74
+#: src/routes/modules/sites.ts:26 src/views/site/site_add/SiteAdd.vue:163
 msgid "Add Site"
 msgstr "사이트 추가"
 
@@ -264,11 +270,11 @@ msgstr "업스트림 추가"
 msgid "Added successfully"
 msgstr "성공적으로 추가됨"
 
-#: src/views/dns/components/DNSChallenge.vue:98
+#: src/views/dns/components/DNSChallenge.vue:101
 msgid "Additional"
 msgstr "추가적인"
 
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:107
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:113
 #: src/views/stream/components/StreamEditor.vue:80
 msgid "Advance Mode"
 msgstr "고급 모드"
@@ -281,15 +287,15 @@ msgstr "고급 인덱싱이 활성화되었지만 재구축 시작에 실패했�
 msgid "Advanced indexing enabled successfully"
 msgstr "고급 인덱싱이 성공적으로 활성화되었습니다"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:294
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:292
 msgid "Advanced log indexing features are free and open source for all users"
 msgstr "고급 로그 인덱싱 기능은 모든 사용자에게 무료이며 오픈 소스입니다"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:81
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:80
 msgid "Advanced memory pooling system"
 msgstr "고급 메모리 풀링 시스템"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:242
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:240
 msgid "Advanced search & filtering"
 msgstr "고급 검색 및 필터링"
 
@@ -344,7 +350,7 @@ msgstr "도달 가능한 모든 IP 주소는 개인 인증 기관과 함께 사�
 msgid "API Base Url"
 msgstr "API 기본 URL"
 
-#: src/views/dns/components/DNSChallenge.vue:71
+#: src/views/dns/components/DNSChallenge.vue:74
 msgid "API Document"
 msgstr "API 문서"
 
@@ -380,7 +386,7 @@ msgstr "차단된 IP를 즉시 삭제하시겠습니까?"
 msgid "Are you sure to delete this passkey immediately?"
 msgstr "이 패스키를 즉시 삭제하시겠습니까?"
 
-#: src/views/dns/components/DNSRecordTable.vue:90
+#: src/views/dns/components/DNSRecordTable.vue:103
 msgid "Are you sure to delete this record?"
 msgstr "이 레코드를 삭제하시겠습니까?"
 
@@ -414,7 +420,7 @@ msgstr "정말 삭제하시겠습니까?"
 msgid "Are you sure you want to reload Nginx on the following sync nodes?"
 msgstr "다음 동기화 노드에서 Nginx를 다시 로드하시겠습니까?"
 
-#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:100
+#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:122
 msgid "Are you sure you want to remove this directive?"
 msgstr "이 지시문을 제거하시겠습니까?"
 
@@ -442,7 +448,7 @@ msgstr "오름차순"
 msgid "Assistant"
 msgstr "어시스턴트"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:61
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:60
 msgid "At least 20GB available disk space"
 msgstr "최소 20GB의 사용 가능한 디스크 공간"
 
@@ -462,7 +468,7 @@ msgstr "인증"
 msgid "Authenticate with a passkey"
 msgstr "패스키로 인증"
 
-#: src/views/other/Login.vue:259
+#: src/views/other/Login.vue:293
 msgid "Authenticating..."
 msgstr "인증 중..."
 
@@ -530,13 +536,18 @@ msgstr "AutoCert가 실행 중입니다. 잠시 기다려 주세요..."
 msgid "AutoCert is running..."
 msgstr "AutoCert 실행 중..."
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:262
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:260
 msgid "Automated log rotation detection"
 msgstr "자동 로그 회전 감지"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:332
+#: src/components/SystemRestore/SystemRestoreContent.vue:340
 msgid "Automatic Restart"
 msgstr "자동 재시작"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:331
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:625
+msgid "Automatically extracted from server_name"
+msgstr "server_name에서 자동으로 추출됨"
 
 #: src/components/UpstreamDetailModal/UpstreamDetailModal.vue:36
 msgid "Average Latency"
@@ -553,8 +564,9 @@ msgstr "평균/PV"
 #: src/views/certificate/components/CertificateActions.vue:22
 #: src/views/config/components/ConfigLeftPanel.vue:274
 #: src/views/config/ConfigList.vue:120 src/views/config/ConfigList.vue:217
-#: src/views/dns/DNSRecordManager.vue:223 src/views/nginx_log/NginxLog.vue:129
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:183
+#: src/views/dns/DNSRecordManager.vue:230 src/views/nginx_log/NginxLog.vue:129
+#: src/views/site/site_add/SiteAdd.vue:246
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:189
 #: src/views/stream/components/StreamEditor.vue:147
 msgid "Back"
 msgstr "뒤로"
@@ -585,11 +597,7 @@ msgstr "백그라운드 로그 서비스를 사용할 수 없음"
 msgid "Backup"
 msgstr "백업"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:155
-msgid "Backup file integrity check failed, it may have been tampered with"
-msgstr "백업 파일 무결성 검사에 실패했습니다. 파일이 변조되었을 수 있습니다"
-
-#: src/constants/errors/backup.ts:38
+#: src/constants/errors/backup.ts:40
 msgid "Backup file not found: {0}"
 msgstr "백업 파일을 찾을 수 없음: {0}"
 
@@ -597,25 +605,37 @@ msgstr "백업 파일을 찾을 수 없음: {0}"
 msgid "Backup has been downloaded successfully"
 msgstr "백업이 성공적으로 다운로드되었습니다"
 
+#: src/constants/errors/backup.ts:61
+msgid "Backup integrity verification failed"
+msgstr "백업 무결성 검증 실패"
+
+#: src/constants/errors/backup.ts:63
+msgid "Backup manifest is missing required file entry: {0}"
+msgstr "백업 매니페스트에 필요한 파일 항목이 없습니다: {0}"
+
 #: src/views/backup/AutoBackup/AutoBackup.vue:50
 msgid "Backup Path"
 msgstr "백업 경로"
 
-#: src/constants/errors/backup.ts:63
+#: src/constants/errors/backup.ts:73
 msgid "Backup path does not exist: {0}"
 msgstr "백업 경로가 존재하지 않습니다: {0}"
 
-#: src/constants/errors/backup.ts:65
+#: src/constants/errors/backup.ts:75
 msgid "Backup path is not a directory: {0}"
 msgstr "백업 경로가 디렉터리가 아닙니다: {0}"
 
-#: src/constants/errors/backup.ts:55
+#: src/constants/errors/backup.ts:65
 msgid "Backup path is required for custom directory backup"
 msgstr "사용자 정의 디렉터리 백업에는 백업 경로가 필요합니다"
 
 #: src/views/backup/AutoBackup/components/CronEditor.vue:141
 msgid "Backup Schedule"
 msgstr "백업 일정"
+
+#: src/constants/errors/backup.ts:64
+msgid "Backup signing key is unavailable"
+msgstr "백업 서명 키를 사용할 수 없음"
 
 #: src/components/Notification/notifications.ts:38
 msgid "Backup task %{backup_name} completed successfully, file: %{file_path}"
@@ -649,17 +669,17 @@ msgstr "차단될 시간"
 msgid "Bark"
 msgstr "Bark"
 
-#: src/views/site/site_add/SiteAdd.vue:80
+#: src/views/site/site_add/SiteAdd.vue:169
 msgid "Base information"
 msgstr "기본 정보"
 
 #: src/views/config/components/ConfigRightPanel/ConfigRightPanel.vue:41
-#: src/views/site/site_edit/components/RightPanel/RightPanel.vue:43
+#: src/views/site/site_edit/components/RightPanel/RightPanel.vue:44
 #: src/views/stream/components/RightPanel/RightPanel.vue:31
 msgid "Basic"
 msgstr "기본"
 
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:110
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:116
 #: src/views/stream/components/StreamEditor.vue:83
 msgid "Basic Mode"
 msgstr "기본 모드"
@@ -699,11 +719,11 @@ msgstr "브라우저"
 msgid "Browser Statistics"
 msgstr "브라우저 통계"
 
-#: src/views/dns/DNSDomainList.vue:257
+#: src/views/dns/DNSDomainList.vue:263
 msgid "Business contact:"
 msgstr "비즈니스 연락처:"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:316
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:314
 msgid ""
 "By enabling advanced indexing, you acknowledge that your system meets the "
 "requirements and understand the performance implications. This will start "
@@ -772,8 +792,8 @@ msgstr ""
 #: src/components/NgxConfigEditor/NgxUpstream.vue:32 src/language/curd.ts:37
 #: src/views/config/components/Delete.vue:98
 #: src/views/dashboard/components/SiteHealthCheckModal.vue:710
-#: src/views/dns/DDNSManager.vue:244 src/views/dns/DNSRecordManager.vue:212
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:102
+#: src/views/dns/DDNSManager.vue:244 src/views/dns/DNSRecordManager.vue:219
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:101
 #: src/views/nginx_log/indexing/IndexManagement.vue:33
 #: src/views/nginx_log/indexing/IndexManagement.vue:59
 #: src/views/preference/components/AuthSettings/Passkey.vue:142
@@ -785,7 +805,7 @@ msgstr ""
 msgid "Cancel"
 msgstr "취소"
 
-#: src/constants/errors/backup.ts:64
+#: src/constants/errors/backup.ts:74
 msgid "Cannot access backup path {0}: {1}"
 msgstr "백업 경로 {0}에 접근할 수 없습니다: {1}"
 
@@ -793,7 +813,7 @@ msgstr "백업 경로 {0}에 접근할 수 없습니다: {1}"
 msgid "Cannot access log file"
 msgstr "로그 파일에 접근할 수 없습니다"
 
-#: src/constants/errors/backup.ts:67
+#: src/constants/errors/backup.ts:77
 msgid "Cannot access storage path {0}: {1}"
 msgstr "저장 경로 {0}에 접근할 수 없습니다: {1}"
 
@@ -801,13 +821,17 @@ msgstr "저장 경로 {0}에 접근할 수 없습니다: {1}"
 msgid "Cannot change initial user password in demo mode"
 msgstr "데모 모드에서는 초기 사용자 비밀번호를 변경할 수 없습니다"
 
-#: src/components/ConfigHistory/DiffViewer.vue:72
+#: src/components/ConfigHistory/DiffViewer.vue:71
 msgid "Cannot compare: Missing content"
 msgstr "비교할 수 없습니다 : 내용 누락"
 
 #: src/constants/errors/config.ts:6
 msgid "Cannot delete protected path"
 msgstr "보호된 경로를 삭제할 수 없습니다"
+
+#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:135
+msgid "Cannot delete server_name while DNS is linked. Clear DNS link first."
+msgstr "DNS가 연결된 상태에서는 server_name을 삭제할 수 없습니다. 먼저 DNS 연결을 해제하세요."
 
 #: src/views/dashboard/NginxDashBoard.vue:154
 msgid "Cannot get performance data in this state"
@@ -954,7 +978,7 @@ msgid "Channel"
 msgstr "채널"
 
 #: src/views/config/components/ConfigRightPanel/ConfigRightPanel.vue:50
-#: src/views/site/site_edit/components/RightPanel/RightPanel.vue:53
+#: src/views/site/site_edit/components/RightPanel/RightPanel.vue:57
 #: src/views/stream/components/RightPanel/RightPanel.vue:34
 msgid "Chat"
 msgstr "채팅"
@@ -1098,7 +1122,7 @@ msgstr "nginx 구성 디렉터리 아래에 streams-available 및 streams-enable
 msgid "Check Interval (seconds)"
 msgstr "확인 간격 (초)"
 
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:181
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:212
 #: src/views/nginx_log/dashboard/components/GeoMapChart.vue:47
 msgid "China Access Map"
 msgstr "중국 접속 지도"
@@ -1118,16 +1142,21 @@ msgstr "환경 변수 정리"
 #: src/components/LLM/ChatMessageInput.vue:67
 #: src/components/Notification/Notification.vue:122
 #: src/views/notification/Notification.vue:45
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:480
 msgid "Clear"
 msgstr "클리어"
+
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:538
+msgid "Clear Link"
+msgstr "링크 지우기"
 
 #: src/components/Notification/Notification.vue:75
 #: src/views/notification/Notification.vue:13
 msgid "Cleared successfully"
 msgstr "성공적으로 제거됨"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:194
-#: src/components/SystemRestore/SystemRestoreContent.vue:271
+#: src/components/SystemRestore/SystemRestoreContent.vue:196
+#: src/components/SystemRestore/SystemRestoreContent.vue:279
 msgid "Click or drag backup file to this area to upload"
 msgstr "이 영역으로 백업 파일을 클릭하거나 드래그하여 업로드하십시오."
 
@@ -1207,7 +1236,12 @@ msgstr "명령어"
 msgid "Command exited with unexpected exit code: {0}, error: {1}"
 msgstr "명령이 예상치 못한 종료 코드로 종료되었습니다: {0}, 오류: {1}"
 
-#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:118
+#: src/views/dns/components/DNSRecordForm.vue:91
+#: src/views/dns/components/DNSRecordTable.vue:49
+msgid "Comment"
+msgstr "댓글"
+
+#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:150
 #: src/components/NgxConfigEditor/LocationEditor.vue:104
 #: src/components/NgxConfigEditor/LocationEditor.vue:135
 #: src/components/NgxConfigEditor/NgxServer.vue:123
@@ -1218,7 +1252,7 @@ msgstr "댓글"
 msgid "Compare"
 msgstr "비교하다"
 
-#: src/components/ConfigHistory/DiffViewer.vue:373
+#: src/components/ConfigHistory/DiffViewer.vue:372
 msgid "Compare Configurations"
 msgstr "구성 비교"
 
@@ -1230,7 +1264,7 @@ msgstr "선택된 비교"
 msgid "Compare with Current"
 msgstr "현재와 ​​비교하십시오"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:71
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:70
 msgid "Complete indexing with search capabilities"
 msgstr "검색 기능이 포함된 완전한 인덱싱"
 
@@ -1238,7 +1272,7 @@ msgstr "검색 기능이 포함된 완전한 인덱싱"
 msgid "components"
 msgstr "구성 요소"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:270
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:268
 msgid "Compressed log file support"
 msgstr "압축 로그 파일 지원"
 
@@ -1274,11 +1308,11 @@ msgstr "구성 항목 파일이 존재하지 않습니다"
 msgid "Config not found"
 msgstr "구성이 찾을 수 없습니다"
 
-#: src/constants/errors/backup.ts:14
+#: src/constants/errors/backup.ts:16
 msgid "Config path is empty"
 msgstr "설정 경로가 비어 있습니다"
 
-#: src/views/site/site_edit/components/RightPanel/RightPanel.vue:49
+#: src/views/site/site_edit/components/RightPanel/RightPanel.vue:53
 msgid "Config Template"
 msgstr "설정 템플릿"
 
@@ -1302,7 +1336,7 @@ msgstr "구성 기록"
 msgid "Configuration information"
 msgstr "구성 정보"
 
-#: src/views/site/site_add/SiteAdd.vue:86
+#: src/views/site/site_add/SiteAdd.vue:176
 msgid "Configuration Name"
 msgstr "구성 이름"
 
@@ -1318,7 +1352,7 @@ msgstr "구성"
 msgid "Configure DDNS"
 msgstr "DDNS 구성"
 
-#: src/views/site/site_add/SiteAdd.vue:81
+#: src/views/site/site_add/SiteAdd.vue:171
 msgid "Configure SSL"
 msgstr "SSL 구성하기"
 
@@ -1330,7 +1364,7 @@ msgstr "삭제 확인"
 msgid "Confirm New Password"
 msgstr "새 비밀번호 확인"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:315
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:313
 msgid "Confirmation Required"
 msgstr "확인 필요"
 
@@ -1355,7 +1389,7 @@ msgstr "연결 시간 초과 기간"
 msgid "Container status unknown"
 msgstr "컨테이너 상태를 알 수 없음"
 
-#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:123
+#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:155
 #: src/components/NgxConfigEditor/LocationEditor.vue:116
 #: src/components/NgxConfigEditor/LocationEditor.vue:144
 msgid "Content"
@@ -1399,11 +1433,11 @@ msgstr "임시 컨테이너를 찾을 수 없습니다"
 msgid "Count"
 msgstr "카운트"
 
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:174
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:207
 msgid "Country / Region"
 msgstr "국가 / 지역"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:48
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:47
 msgid "CPU"
 msgstr "CPU"
 
@@ -1423,13 +1457,18 @@ msgstr "CPU 사용률이 비교적 높으므로 Nginx 설정 최적화를 고려
 msgid "CPU:"
 msgstr "CPU:"
 
-#: src/views/site/site_add/SiteAdd.vue:147
+#: src/views/site/site_add/SiteAdd.vue:263
 msgid "Create Another"
 msgstr "다른 것 생성하기"
 
 #: src/views/backup/components/BackupCreator.vue:86
 msgid "Create Backup"
 msgstr "백업 생성"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:365
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:659
+msgid "Create DNS Record"
+msgstr "DNS 레코드 생성"
 
 #: src/views/config/ConfigList.vue:130
 msgid "Create File"
@@ -1439,7 +1478,12 @@ msgstr "파일 생성"
 msgid "Create Folder"
 msgstr "폴더 생성"
 
-#: src/views/dns/DNSRecordManager.vue:200
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:305
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:599
+msgid "Create new DNS record"
+msgstr "새 DNS 레코드 생성"
+
+#: src/views/dns/DNSRecordManager.vue:206
 msgid "Create Record"
 msgstr "레코드 생성"
 
@@ -1466,12 +1510,12 @@ msgstr "성공적으로 생성됨"
 msgid "Creating client facilitates communication with the CA server"
 msgstr "클라이언트 생성은 CA 서버와의 통신을 용이하게 합니다"
 
-#: src/components/AutoCertForm/DNSChallenge.vue:131
-#: src/views/dns/DDNSManager.vue:65 src/views/dns/DNSDomainList.vue:109
+#: src/components/AutoCertForm/DNSChallenge.vue:138
+#: src/views/dns/DDNSManager.vue:65 src/views/dns/DNSDomainList.vue:115
 msgid "Credential"
 msgstr "인증 정보"
 
-#: src/routes/modules/dns.ts:20 src/views/dns/components/DNSChallenge.vue:87
+#: src/routes/modules/dns.ts:20 src/views/dns/components/DNSChallenge.vue:90
 msgid "Credentials"
 msgstr "인증 정보들"
 
@@ -1479,7 +1523,7 @@ msgstr "인증 정보들"
 msgid "Cron Expression"
 msgstr "Cron 표현식"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:266
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:264
 msgid "Cross-file timeline correlation"
 msgstr "크로스 파일 타임라인 상관 관계"
 
@@ -1622,7 +1666,7 @@ msgstr "공유 메모리 영역 이름과 크기를 정의합니다(예: proxy_c
 #: src/views/config/components/Delete.vue:65
 #: src/views/config/components/Delete.vue:97
 #: src/views/config/ConfigList.vue:199
-#: src/views/dns/components/DNSRecordTable.vue:94
+#: src/views/dns/components/DNSRecordTable.vue:107
 #: src/views/site/site_list/SiteList.vue:100
 #: src/views/stream/StreamList.vue:110
 msgid "Delete"
@@ -1704,6 +1748,12 @@ msgstr "성공적으로 삭제됨"
 #: src/views/preference/tabs/NodeSettings.vue:28
 msgid "Demo"
 msgstr "데모"
+
+#: src/views/terminal/Terminal.vue:212
+msgid ""
+"Demo mode is enabled. This terminal only allows a small set of safe "
+"read-only commands."
+msgstr "데모 모드가 활성화되었습니다. 이 터미널은 안전한 읽기 전용 명령의 작은 집합만 허용합니다."
 
 #: src/views/config/components/ConfigRightPanel/Basic.vue:60
 msgid "Deploy"
@@ -1870,7 +1920,7 @@ msgstr "스트림 %{name}을(를) %{node}에서 비활성화했습니다"
 #: src/views/preference/tabs/NodeSettings.vue:25
 #: src/views/preference/tabs/NodeSettings.vue:30
 #: src/views/site/components/SiteStatusSelect.vue:162
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:75
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:81
 #: src/views/site/site_list/columns.tsx:146 src/views/stream/columns.tsx:112
 #: src/views/stream/components/StreamEditor.vue:55
 #: src/views/user/userColumns.tsx:39
@@ -1891,6 +1941,7 @@ msgid "Disk IO"
 msgstr "디스크 IO"
 
 #: src/routes/modules/dns.ts:11
+#: src/views/site/site_edit/components/RightPanel/RightPanel.vue:47
 msgid "DNS"
 msgstr "DNS"
 
@@ -1898,24 +1949,68 @@ msgstr "DNS"
 msgid "DNS Credentials"
 msgstr "DNS 인증 정보"
 
-#: src/routes/modules/dns.ts:28 src/views/dns/DNSDomainList.vue:228
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:251
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:545
+msgid "DNS Domain"
+msgstr "DNS 도메인"
+
+#: src/routes/modules/dns.ts:28 src/views/dns/DNSDomainList.vue:234
 msgid "DNS Domains"
 msgstr "DNS 도메인"
 
-#: src/views/dns/components/DNSRecordTable.vue:81
+#: src/views/dns/components/DNSRecordTable.vue:94
 msgid "DNS Only"
 msgstr "DNS 전용"
 
-#: src/components/AutoCertForm/DNSChallenge.vue:121
-#: src/views/dns/components/DNSChallenge.vue:60
+#: src/components/AutoCertForm/DNSChallenge.vue:128
+#: src/views/dns/components/DNSChallenge.vue:63
 msgid "DNS Provider"
 msgstr "DNS 제공자"
 
-#: src/views/dns/DNSDomainList.vue:244
+#: src/views/dns/DNSDomainList.vue:250
 msgid "DNS Provider Support"
 msgstr "DNS 공급자 지원"
 
-#: src/routes/modules/dns.ts:44 src/views/dns/DNSRecordManager.vue:58
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:274
+#: src/views/site/site_add/SiteAdd.vue:170
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:568
+msgid "DNS Record"
+msgstr "DNS 레코드"
+
+#: src/views/site/site_add/SiteAdd.vue:145
+msgid "DNS record created and linked successfully"
+msgstr "DNS 레코드가 성공적으로 생성 및 연결되었습니다"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:213
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:340
+msgid "DNS record created successfully"
+msgstr "DNS 레코드가 성공적으로 생성되었습니다"
+
+#: src/views/site/site_add/SiteAdd.vue:253
+msgid "DNS record has been linked: %{name}"
+msgstr "DNS 레코드가 연결되었습니다: %{name}"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:245
+msgid "DNS Record Integration (Optional)"
+msgstr "DNS 레코드 통합 (선택 사항)"
+
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:288
+msgid "DNS record linked and server_name updated: %{name}"
+msgstr "DNS 레코드가 연결되고 server_name이 업데이트되었습니다: %{name}"
+
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:489
+msgid "DNS Record Missing"
+msgstr "DNS 레코드 누락"
+
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:403
+msgid "DNS record recreated successfully"
+msgstr "DNS 레코드가 성공적으로 재생성되었습니다"
+
+#: src/views/site/site_add/SiteAdd.vue:137
+msgid "DNS record selected: %{name}"
+msgstr "DNS 레코드 선택됨: %{name}"
+
+#: src/routes/modules/dns.ts:44 src/views/dns/DNSRecordManager.vue:62
 msgid "DNS Records"
 msgstr "DNS 레코드"
 
@@ -1979,7 +2074,7 @@ msgid "Document Count"
 msgstr "문서 수"
 
 #: src/views/certificate/components/DNSIssueCertificate.vue:119
-#: src/views/dns/DDNSManager.vue:60 src/views/dns/DNSDomainList.vue:98
+#: src/views/dns/DDNSManager.vue:60 src/views/dns/DNSDomainList.vue:104
 msgid "Domain"
 msgstr "도메인"
 
@@ -2051,7 +2146,7 @@ msgstr "로컬로 성공적으로 복제됨"
 msgid "Dynamic"
 msgstr "동적"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:238
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:236
 msgid "Dynamic shard management"
 msgstr "동적 샤드 관리"
 
@@ -2067,11 +2162,11 @@ msgstr "EAB HMAC 키"
 msgid "EAB Key ID"
 msgstr "EAB 키 ID"
 
-#: src/language/curd.ts:8 src/views/dns/components/DNSRecordTable.vue:87
+#: src/language/curd.ts:8 src/views/dns/components/DNSRecordTable.vue:100
 msgid "Edit"
 msgstr "편집"
 
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:64
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:70
 #: src/views/stream/components/StreamEditor.vue:44
 msgid "Edit %{n}"
 msgstr "%{n} 편집"
@@ -2081,7 +2176,7 @@ msgstr "%{n} 편집"
 msgid "Edit Configuration"
 msgstr "구성 편집"
 
-#: src/views/dns/DNSRecordManager.vue:200
+#: src/views/dns/DNSRecordManager.vue:206
 msgid "Edit Record"
 msgstr "레코드 편집"
 
@@ -2119,7 +2214,7 @@ msgstr "2FA가 성공적으로 활성화되었습니다"
 msgid "Enable Advanced Indexing"
 msgstr "고급 인덱싱 활성화"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:98
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:97
 msgid "Enable Advanced Log Indexing"
 msgstr "고급 로그 인덱싱 활성화"
 
@@ -2155,9 +2250,15 @@ msgstr "HTTP/3 활성화"
 msgid "Enable HTTPS"
 msgstr "HTTPS 활성화"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:100
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:99
 msgid "Enable Indexing"
 msgstr "인덱싱 활성화"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:353
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:522
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:647
+msgid "Enable Proxy (Cloudflare)"
+msgstr "프록시 활성화 (Cloudflare)"
 
 #: src/views/dashboard/components/ParamsOpt/ProxyCacheConfig.vue:113
 msgid "Enable Proxy Cache"
@@ -2234,7 +2335,7 @@ msgstr "TOTP 활성화"
 #: src/views/preference/tabs/NodeSettings.vue:25
 #: src/views/preference/tabs/NodeSettings.vue:30
 #: src/views/site/components/SiteStatusSelect.vue:159
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:69
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:75
 #: src/views/site/site_list/columns.tsx:142 src/views/stream/columns.tsx:108
 #: src/views/stream/components/RightPanel/Basic.vue:24
 #: src/views/stream/components/StreamEditor.vue:49
@@ -2243,7 +2344,7 @@ msgid "Enabled"
 msgstr "활성화됨"
 
 #: src/views/site/components/SiteStatusSelect.vue:54
-#: src/views/site/site_add/SiteAdd.vue:39
+#: src/views/site/site_add/SiteAdd.vue:56
 #: src/views/stream/components/StreamStatusSelect.vue:27
 msgid "Enabled successfully"
 msgstr "성공적으로 활성화됨"
@@ -2256,7 +2357,7 @@ msgstr "멀티플렉싱 및 서버 푸시 기능을 갖춘 HTTP/2 지원을 활�
 msgid "Enables HTTP/3 support based on QUIC protocol for best performance"
 msgstr "최상의 성능을 위해 QUIC 프로토콜 기반의 HTTP/3 지원을 활성화합니다"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:111
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:110
 msgid ""
 "Enabling advanced log indexing will consume significant computational "
 "resources including CPU and memory. Please ensure your system meets the "
@@ -2307,7 +2408,7 @@ msgstr "오류"
 msgid "Error details"
 msgstr "오류 세부 정보"
 
-#: src/components/ConfigHistory/DiffViewer.vue:138
+#: src/components/ConfigHistory/DiffViewer.vue:137
 msgid "Error initializing diff viewer"
 msgstr "차이점 뷰어 초기화 오류"
 
@@ -2334,11 +2435,11 @@ msgid ""
 "text messages."
 msgstr "오류 로그는 자유 형식의 텍스트 메시지를 포함하기 때문에 구조화된 분석을 지원하지 않습니다."
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:274
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:272
 msgid "Error pattern recognition"
 msgstr "오류 패턴 인식"
 
-#: src/components/ConfigHistory/DiffViewer.vue:81
+#: src/components/ConfigHistory/DiffViewer.vue:80
 msgid "Error processing content"
 msgstr "콘텐츠 처리 오류"
 
@@ -2366,7 +2467,7 @@ msgstr "매월 %{day}일 %{time}에 실행"
 msgid "Expand"
 msgstr "확장"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:194
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:192
 msgid "Expected Performance"
 msgstr "예상 성능"
 
@@ -2445,15 +2546,15 @@ msgstr "Nginx UI 파일 백업 실패: {0}"
 msgid "Failed to build nginx config: {0}"
 msgstr "nginx 구성 빌드 실패: {0}"
 
-#: src/constants/errors/backup.ts:17
+#: src/constants/errors/backup.ts:19
 msgid "Failed to calculate hash: {0}"
 msgstr "해시 계산 실패: {0}"
 
-#: src/constants/errors/backup.ts:54
+#: src/constants/errors/backup.ts:56
 msgid "Failed to calculate Nginx hash: {0}"
 msgstr "Nginx 해시 계산 실패: {0}"
 
-#: src/constants/errors/backup.ts:53
+#: src/constants/errors/backup.ts:55
 msgid "Failed to calculate Nginx UI hash: {0}"
 msgstr "Nginx UI 해시 계산 실패: {0}"
 
@@ -2461,19 +2562,19 @@ msgstr "Nginx UI 해시 계산 실패: {0}"
 msgid "Failed to cleanup temporary directory: {0}"
 msgstr "임시 디렉터리 정리 실패: {0}"
 
-#: src/constants/errors/backup.ts:15
+#: src/constants/errors/backup.ts:17
 msgid "Failed to copy config file: {0}"
 msgstr "설정 파일 복사 실패: {0}"
 
-#: src/constants/errors/backup.ts:16
+#: src/constants/errors/backup.ts:18
 msgid "Failed to copy database file: {0}"
 msgstr "데이터베이스 파일 복사 실패: {0}"
 
-#: src/constants/errors/backup.ts:31
+#: src/constants/errors/backup.ts:33
 msgid "Failed to copy file content: {0}"
 msgstr "파일 내용 복사 실패: {0}"
 
-#: src/constants/errors/backup.ts:19
+#: src/constants/errors/backup.ts:21
 msgid "Failed to copy Nginx config directory: {0}"
 msgstr "Nginx 설정 디렉토리 복사 실패: {0}"
 
@@ -2490,11 +2591,24 @@ msgstr "백업 생성 실패"
 msgid "Failed to create backup file: {0}"
 msgstr "백업 파일 생성 실패: {0}"
 
-#: src/constants/errors/backup.ts:43
+#: src/constants/errors/backup.ts:15
+msgid "Failed to create backup manifest signature: {0}"
+msgstr "백업 매니페스트 서명 생성 실패: {0}"
+
+#: src/constants/errors/backup.ts:14
+msgid "Failed to create backup manifest: {0}"
+msgstr "백업 매니페스트 생성 실패: {0}"
+
+#: src/constants/errors/backup.ts:45
 msgid "Failed to create directory: {0}"
 msgstr "디렉터리 생성 실패: {0}"
 
-#: src/constants/errors/backup.ts:45 src/constants/errors/geolite.ts:6
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:222
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:360
+msgid "Failed to create DNS record"
+msgstr "DNS 레코드 생성 실패"
+
+#: src/constants/errors/backup.ts:47 src/constants/errors/geolite.ts:6
 msgid "Failed to create file: {0}"
 msgstr "파일 생성 실패: {0}"
 
@@ -2502,19 +2616,19 @@ msgstr "파일 생성 실패: {0}"
 msgid "Failed to create hash info file: {0}"
 msgstr "해시 정보 파일 생성 실패: {0}"
 
-#: src/constants/errors/backup.ts:44
+#: src/constants/errors/backup.ts:46
 msgid "Failed to create parent directory: {0}"
 msgstr "상위 디렉터리 생성 실패: {0}"
 
-#: src/constants/errors/backup.ts:32
+#: src/constants/errors/backup.ts:34
 msgid "Failed to create restore directory: {0}"
 msgstr "복원 디렉토리 생성 실패: {0}"
 
-#: src/constants/errors/backup.ts:66
+#: src/constants/errors/backup.ts:76
 msgid "Failed to create storage directory {0}: {1}"
 msgstr "저장 디렉터리 생성 실패 {0}: {1}"
 
-#: src/constants/errors/backup.ts:47
+#: src/constants/errors/backup.ts:49
 msgid "Failed to create symbolic link: {0}"
 msgstr "심볼릭 링크 생성 실패: {0}"
 
@@ -2538,15 +2652,15 @@ msgstr "xz 리더 생성에 실패했습니다: {0}"
 msgid "Failed to create zip archive: {0}"
 msgstr "ZIP 아카이브 생성 실패: {0}"
 
-#: src/constants/errors/backup.ts:28
+#: src/constants/errors/backup.ts:30
 msgid "Failed to create zip entry: {0}"
 msgstr "ZIP 항목 생성 실패: {0}"
 
-#: src/constants/errors/backup.ts:27
+#: src/constants/errors/backup.ts:29
 msgid "Failed to create zip file: {0}"
 msgstr "ZIP 파일 생성 실패: {0}"
 
-#: src/constants/errors/backup.ts:30
+#: src/constants/errors/backup.ts:32
 msgid "Failed to create zip header: {0}"
 msgstr "ZIP 헤더 생성 실패: {0}"
 
@@ -2554,19 +2668,19 @@ msgstr "ZIP 헤더 생성 실패: {0}"
 msgid "Failed to decompress GeoLite2 database: {0}"
 msgstr "GeoLite2 데이터베이스 압축 해제에 실패했습니다: {0}"
 
-#: src/constants/errors/backup.ts:25
+#: src/constants/errors/backup.ts:27
 msgid "Failed to decrypt data: {0}"
 msgstr "데이터 복호화 실패: {0}"
 
-#: src/constants/errors/backup.ts:50
+#: src/constants/errors/backup.ts:52
 msgid "Failed to decrypt file: {0}"
 msgstr "파일 복호화 실패: {0}"
 
-#: src/constants/errors/backup.ts:35
+#: src/constants/errors/backup.ts:37
 msgid "Failed to decrypt Nginx directory: {0}"
 msgstr "Nginx 디렉터리 복호화 실패: {0}"
 
-#: src/constants/errors/backup.ts:34
+#: src/constants/errors/backup.ts:36
 msgid "Failed to decrypt Nginx UI directory: {0}"
 msgstr "Nginx UI 디렉터리 복호화 실패: {0}"
 
@@ -2616,11 +2730,11 @@ msgstr "고급 인덱싱 활성화 실패"
 msgid "Failed to enable maintenance mode %{msg}"
 msgstr "유지 보수 모드 활성화 실패: %{msg}"
 
-#: src/constants/errors/backup.ts:24
+#: src/constants/errors/backup.ts:26
 msgid "Failed to encrypt data: {0}"
 msgstr "데이터 암호화 실패: {0}"
 
-#: src/constants/errors/backup.ts:22
+#: src/constants/errors/backup.ts:24
 msgid "Failed to encrypt file: {0}"
 msgstr "파일 암호화 실패: {0}"
 
@@ -2640,7 +2754,7 @@ msgstr "명령 실행 실패: {0}"
 msgid "Failed to execute template: {0}"
 msgstr "템플릿 실행 실패: {0}"
 
-#: src/constants/errors/backup.ts:33
+#: src/constants/errors/backup.ts:35
 msgid "Failed to extract archive: {0}"
 msgstr "아카이브 추출 실패: {0}"
 
@@ -2696,6 +2810,11 @@ msgstr "컨테이너 검사 실패: {0}"
 msgid "Failed to inspect current container: {0}"
 msgstr "현재 컨테이너 검사 실패: {0}"
 
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:137
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:166
+msgid "Failed to load DNS records"
+msgstr "DNS 레코드를 불러오지 못했습니다"
+
 #: src/components/ConfigHistory/ConfigHistory.vue:83
 msgid "Failed to load history records"
 msgstr "기록 불러오기 실패"
@@ -2708,15 +2827,15 @@ msgstr "nginx 구성 경로를 로드하지 못했습니다"
 msgid "Failed to open file: {0}"
 msgstr "파일 열기에 실패했습니다: {0}"
 
-#: src/constants/errors/backup.ts:29
+#: src/constants/errors/backup.ts:31
 msgid "Failed to open source file: {0}"
 msgstr "소스 파일 열기 실패: {0}"
 
-#: src/constants/errors/backup.ts:46
+#: src/constants/errors/backup.ts:48
 msgid "Failed to open zip entry: {0}"
 msgstr "ZIP 항목 열기 실패: {0}"
 
-#: src/constants/errors/backup.ts:42
+#: src/constants/errors/backup.ts:44
 msgid "Failed to open zip file: {0}"
 msgstr "ZIP 파일 열기 실패: {0}"
 
@@ -2736,11 +2855,19 @@ msgstr "템플릿 구문 분석 실패: {0}"
 msgid "Failed to pull image: {0}"
 msgstr "이미지 가져오기 실패: {0}"
 
+#: src/constants/errors/backup.ts:58
+msgid "Failed to read backup manifest signature: {0}"
+msgstr "백업 매니페스트 서명 읽기 실패: {0}"
+
+#: src/constants/errors/backup.ts:57
+msgid "Failed to read backup manifest: {0}"
+msgstr "백업 매니페스트 읽기 실패: {0}"
+
 #: src/constants/errors/geolite.ts:11
 msgid "Failed to read compressed data: {0}"
 msgstr "압축된 데이터를 읽는 데 실패했습니다: {0}"
 
-#: src/constants/errors/backup.ts:49
+#: src/constants/errors/backup.ts:51
 msgid "Failed to read encrypted file: {0}"
 msgstr "암호화된 파일 읽기 실패: {0}"
 
@@ -2748,11 +2875,11 @@ msgstr "암호화된 파일 읽기 실패: {0}"
 msgid "Failed to read file"
 msgstr "파일 읽기 실패"
 
-#: src/constants/errors/backup.ts:21
+#: src/constants/errors/backup.ts:23
 msgid "Failed to read file: {0}"
 msgstr "파일 읽기 실패: {0}"
 
-#: src/constants/errors/backup.ts:52
+#: src/constants/errors/backup.ts:54
 msgid "Failed to read hash info file: {0}"
 msgstr "해시 정보 파일 읽기 실패: {0}"
 
@@ -2768,7 +2895,7 @@ msgstr "출력 읽기 실패: {0}"
 msgid "Failed to read response body: {0}"
 msgstr "응답 본문을 읽는 데 실패했습니다: {0}"
 
-#: src/constants/errors/backup.ts:20
+#: src/constants/errors/backup.ts:22
 msgid "Failed to read symlink: {0}"
 msgstr "심볼릭 링크 읽기 실패: {0}"
 
@@ -2780,11 +2907,15 @@ msgstr "파일 인덱스 재구성 실패"
 msgid "Failed to rebuild index"
 msgstr "인덱스 재구성 실패"
 
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:429
+msgid "Failed to recreate DNS record"
+msgstr "DNS 레코드 재생성 실패"
+
 #: src/views/dashboard/SiteNavigation.vue:86
 msgid "Failed to refresh sites"
 msgstr "사이트 새로 고침 실패"
 
-#: src/constants/errors/backup.ts:37
+#: src/constants/errors/backup.ts:39
 msgid "Failed to restore Nginx configs: {0}"
 msgstr "Nginx 설정 복원 실패: {0}"
 
@@ -2832,11 +2963,11 @@ msgstr "상태 업데이트 실패"
 msgid "Failed to upload file"
 msgstr "파일 업로드 실패"
 
-#: src/constants/errors/backup.ts:36
+#: src/constants/errors/backup.ts:38
 msgid "Failed to verify hashes: {0}"
 msgstr "해시 확인 실패: {0}"
 
-#: src/constants/errors/backup.ts:58
+#: src/constants/errors/backup.ts:68
 msgid "Failed to write backup file: {0}"
 msgstr "백업 파일 쓰기 실패: {0}"
 
@@ -2844,19 +2975,19 @@ msgstr "백업 파일 쓰기 실패: {0}"
 msgid "Failed to write decompressed data: {0}"
 msgstr "압축 해제된 데이터를 쓰는 데 실패했습니다: {0}"
 
-#: src/constants/errors/backup.ts:51
+#: src/constants/errors/backup.ts:53
 msgid "Failed to write decrypted file: {0}"
 msgstr "복호화된 파일 쓰기 실패: {0}"
 
-#: src/constants/errors/backup.ts:23
+#: src/constants/errors/backup.ts:25
 msgid "Failed to write encrypted file: {0}"
 msgstr "암호화된 파일 쓰기 실패: {0}"
 
-#: src/constants/errors/backup.ts:59
+#: src/constants/errors/backup.ts:69
 msgid "Failed to write security key file: {0}"
 msgstr "보안 키 파일 쓰기 실패: {0}"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:228
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:226
 msgid "Features"
 msgstr "기능"
 
@@ -2908,7 +3039,7 @@ msgstr "필터"
 msgid "Filter log content"
 msgstr "로그 내용 필터링"
 
-#: src/language/constants.ts:19 src/views/site/site_add/SiteAdd.vue:82
+#: src/language/constants.ts:19 src/views/site/site_add/SiteAdd.vue:172
 msgid "Finished"
 msgstr "완료됨"
 
@@ -2943,7 +3074,7 @@ msgstr "중국 사용자를 위한"
 msgid "For Chinese user: https://cloud.nginxui.com/"
 msgstr "중국 사용자를 위해: https://cloud.nginxui.com/"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:306
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:304
 msgid "For commercial or professional use, contact"
 msgstr "상업적 또는 전문적 사용을 원하시면 다음으로 문의하세요"
 
@@ -2995,7 +3126,7 @@ msgstr "프론트엔드"
 msgid "Full Text Search"
 msgstr "전체 텍스트 검색"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:258
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:256
 msgid "Full-text search support"
 msgstr "전문 검색 지원"
 
@@ -3028,7 +3159,7 @@ msgstr "계정 등록을 위한 개인 키 생성 중"
 msgid "GeoLite"
 msgstr "GeoLite"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:179
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:178
 #: src/views/preference/tabs/GeoLiteSettings.vue:7
 msgid "GeoLite2 Database"
 msgstr "GeoLite2 데이터베이스"
@@ -3082,7 +3213,7 @@ msgid "Github Proxy"
 msgstr "Github 프록시"
 
 #: src/views/nginx_log/dashboard/components/GeoMapChart.vue:47
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:202
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:235
 msgid "Global Access Map"
 msgstr "글로벌 접속 지도"
 
@@ -3161,8 +3292,8 @@ msgid "Hide Assistant"
 msgstr "어시스턴트 숨기기"
 
 #: src/composables/useGeoTranslation.ts:165
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:135
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:103
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:165
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:133
 msgid "High"
 msgstr "높음"
 
@@ -3171,7 +3302,7 @@ msgid "Higher value means better connection reuse"
 msgstr "값이 높을수록 연결 재사용이 더 좋다는 것을 의미합니다"
 
 #: src/views/config/components/ConfigLeftPanel.vue:255
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:94
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:100
 #: src/views/stream/components/StreamEditor.vue:68
 msgid "History"
 msgstr "기록"
@@ -3234,7 +3365,7 @@ msgid ""
 "option."
 msgstr "기존 인증서를 자동으로 취소하려면 이 옵션을 활성화하세요."
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:168
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:167
 msgid ""
 "If you want to change the storage location, you can set the `IndexPath` of "
 "`nginx_log` section in the Nginx UI config."
@@ -3269,7 +3400,7 @@ msgid ""
 "processes"
 msgstr "마스터 프로세스, 워커 프로세스, 캐시 프로세스 및 기타 Nginx 프로세스 포함"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:254
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:252
 msgid "Incremental index scanning"
 msgstr "증분 인덱스 스캐닝"
 
@@ -3386,13 +3517,21 @@ msgstr "간격(초)"
 msgid "Invalid"
 msgstr "무효"
 
-#: src/constants/errors/backup.ts:41
+#: src/constants/errors/backup.ts:43
 msgid "Invalid AES IV format: {0}"
 msgstr "잘못된 AES IV 형식: {0}"
 
-#: src/constants/errors/backup.ts:40
+#: src/constants/errors/backup.ts:42
 msgid "Invalid AES key format: {0}"
 msgstr "잘못된 AES 키 형식: {0}"
+
+#: src/constants/errors/backup.ts:60
+msgid "Invalid backup manifest signature"
+msgstr "잘못된 백업 매니페스트 서명"
+
+#: src/constants/errors/backup.ts:59
+msgid "Invalid backup manifest: {0}"
+msgstr "잘못된 백업 매니페스트: {0}"
 
 #: src/views/certificate/components/CertificateDownload.vue:54
 #: src/views/certificate/components/CertificateFileUpload.vue:88
@@ -3411,7 +3550,7 @@ msgstr "잘못된 커밋 SHA"
 msgid "Invalid file object"
 msgstr "잘못된 파일 객체"
 
-#: src/constants/errors/backup.ts:48
+#: src/constants/errors/backup.ts:50
 msgid "Invalid file path: {0}"
 msgstr "잘못된 파일 경로: {0}"
 
@@ -3436,7 +3575,7 @@ msgstr "잘못된 알림 설정"
 msgid "Invalid otp code"
 msgstr "잘못된 OTP 코드"
 
-#: src/constants/errors/backup.ts:26
+#: src/constants/errors/backup.ts:28
 msgid "Invalid padding in decrypted data"
 msgstr "복호화된 데이터의 패딩이 유효하지 않습니다"
 
@@ -3444,7 +3583,7 @@ msgstr "복호화된 데이터의 패딩이 유효하지 않습니다"
 msgid "Invalid passcode or recovery code"
 msgstr "잘못된 패스코드 또는 복구 코드"
 
-#: src/constants/errors/backup.ts:61
+#: src/constants/errors/backup.ts:71
 msgid "Invalid path: {0}"
 msgstr "잘못된 경로: {0}"
 
@@ -3461,7 +3600,7 @@ msgstr "유효하지 않은 복구 코드"
 msgid "Invalid request format"
 msgstr "잘못된 요청 형식"
 
-#: src/constants/errors/backup.ts:39
+#: src/constants/errors/backup.ts:41
 msgid "Invalid security token format"
 msgstr "잘못된 보안 토큰 형식"
 
@@ -3486,6 +3625,12 @@ msgstr "IP"
 #: src/views/nginx_log/structured/StructuredLogViewer.vue:518
 msgid "IP Address"
 msgstr "IP 주소"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:335
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:504
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:629
+msgid "IP Address / Target"
+msgstr "IP 주소 / 대상"
 
 #: src/components/AutoCertForm/AutoCertForm.vue:123
 msgid "IP Certificate Notice"
@@ -3676,6 +3821,24 @@ msgstr "라이선스 유형"
 msgid "Link"
 msgstr "링크"
 
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:456
+msgid ""
+"Link this site to a DNS record. The server_name will be used for the DNS "
+"record name."
+msgstr "이 사이트를 DNS 레코드에 연결하세요. server_name이 DNS 레코드 이름으로 사용됩니다."
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:247
+msgid ""
+"Link this site to a DNS record. The server_name will be used for the DNS "
+"record name. You can skip this step if DNS is already configured."
+msgstr ""
+"이 사이트를 DNS 레코드에 연결하세요. server_name이 DNS 레코드 이름으로 사용됩니다. DNS가 이미 구성된 경우 이 "
+"단계를 건너뛸 수 있습니다."
+
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:466
+msgid "Linked DNS Record"
+msgstr "연결된 DNS 레코드"
+
 #: src/language/curd.ts:23
 msgid "List"
 msgstr "목록"
@@ -3801,7 +3964,7 @@ msgstr "로그 파서가 초기화되지 않았습니다. 사용 전에 indexer.
 msgid "Log path is not under whitelist"
 msgstr "로그 경로가 화이트리스트에 없습니다"
 
-#: src/routes/modules/auth.ts:14 src/views/other/Login.vue:317
+#: src/routes/modules/auth.ts:14 src/views/other/Login.vue:360
 msgid "Login"
 msgstr "로그인"
 
@@ -3831,8 +3994,8 @@ msgstr ""
 "있습니다. Nginx UI의 크론탭 작업 스케줄러는설정한 간격 (분 단위)에서 logrotate 명령을 실행합니다."
 
 #: src/composables/useGeoTranslation.ts:166
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:135
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:103
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:165
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:133
 msgid "Low"
 msgstr "낮음"
 
@@ -3842,7 +4005,7 @@ msgid "Main Node"
 msgstr "메인 노드"
 
 #: src/views/site/components/SiteStatusSelect.vue:165
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:81
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:87
 #: src/views/site/site_list/columns.tsx:150
 msgid "Maintenance"
 msgstr "유지보수"
@@ -3872,7 +4035,7 @@ msgstr "인증서를 받기 전에 .well-known 디렉터리에 대한 역방향 
 msgid "Manage Configs"
 msgstr "구성 관리"
 
-#: src/views/dns/DNSDomainList.vue:236
+#: src/views/dns/DNSDomainList.vue:242
 msgid "Manage Records"
 msgstr "레코드 관리"
 
@@ -3969,7 +4132,7 @@ msgstr "최대 작업자 프로세스 수:"
 
 #: src/views/dashboard/ServerAnalytic.vue:228
 #: src/views/dashboard/ServerAnalytic.vue:229
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:54
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:53
 msgid "Memory"
 msgstr "메모리"
 
@@ -3977,7 +4140,7 @@ msgstr "메모리"
 msgid "Memory and Storage"
 msgstr "메모리 및 저장소"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:79
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:78
 msgid "Memory Design"
 msgstr "메모리 설계"
 
@@ -4006,7 +4169,7 @@ msgstr "최소 여유 공간"
 msgid "Minimum free space in the cache directory"
 msgstr "캐시 디렉터리의 최소 여유 공간"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:143
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:142
 msgid "Minimum:"
 msgstr "최소:"
 
@@ -4051,7 +4214,7 @@ msgstr "수정"
 msgid "Modify Certificate"
 msgstr "인증서 수정"
 
-#: src/views/site/site_add/SiteAdd.vue:144
+#: src/views/site/site_add/SiteAdd.vue:260
 msgid "Modify Config"
 msgstr "설정 수정"
 
@@ -4083,7 +4246,7 @@ msgstr "매월 %{day}일 %{time}에"
 msgid "Mozilla/5.0..."
 msgstr "Mozilla/5.0..."
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:278
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:276
 msgid "Multi-dimensional data visualization"
 msgstr "다차원 데이터 시각화"
 
@@ -4111,8 +4274,8 @@ msgstr "해당 없음"
 #: src/views/config/components/Delete.vue:123
 #: src/views/config/components/Mkdir.vue:64
 #: src/views/config/configColumns.tsx:17
-#: src/views/dns/components/DNSRecordForm.vue:63
-#: src/views/dns/components/DNSRecordTable.vue:17
+#: src/views/dns/components/DNSRecordForm.vue:64
+#: src/views/dns/components/DNSRecordTable.vue:18
 #: src/views/dns/DNSCredential.vue:17 src/views/namespace/columns.ts:9
 #: src/views/nginx_log/NginxLogList.vue:155 src/views/node/nodeColumns.tsx:8
 #: src/views/preference/components/AuthSettings/AddPasskey.vue:81
@@ -4141,7 +4304,7 @@ msgstr "네임스페이스"
 msgid "Namespaces"
 msgstr "네임스페이스"
 
-#: src/views/dns/DNSDomainList.vue:251
+#: src/views/dns/DNSDomainList.vue:257
 msgid ""
 "Need more DNS providers? Support us through donations or contact us for "
 "commercial collaboration"
@@ -4197,7 +4360,8 @@ msgstr "새 버전 출시"
 
 #: src/views/certificate/components/DNSIssueCertificate.vue:184
 #: src/views/install/components/InstallView.vue:96
-#: src/views/site/site_add/SiteAdd.vue:131
+#: src/views/site/site_add/SiteAdd.vue:233
+#: src/views/site/site_add/SiteAdd.vue:240
 #: src/views/site/site_edit/components/Cert/ObtainCert.vue:225
 msgid "Next"
 msgstr "다음"
@@ -4243,7 +4407,7 @@ msgstr "Nginx 설정에 sites-enabled가 포함되어 있지 않음"
 msgid "Nginx conf not include stream-enabled"
 msgstr "Nginx 설정에 stream-enabled가 포함되어 있지 않음"
 
-#: src/constants/errors/backup.ts:18
+#: src/constants/errors/backup.ts:20
 msgid "Nginx config directory is not set"
 msgstr "Nginx 설정 디렉터리가 설정되지 않았습니다"
 
@@ -4259,7 +4423,7 @@ msgstr "Nginx 구성 진입 파일이 존재합니다"
 msgid "Nginx configuration has been restored"
 msgstr "Nginx 구성이 복원되었습니다"
 
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:135
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:141
 #: src/views/stream/components/StreamEditor.vue:105
 msgid "Nginx Configuration Parse Error"
 msgstr "Nginx 구성 분석 오류"
@@ -4392,7 +4556,7 @@ msgstr "Nginx UI가 이미 설치되었습니다"
 msgid "Nginx UI configuration has been restored"
 msgstr "Nginx UI 설정이 복원되었습니다"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:336
+#: src/components/SystemRestore/SystemRestoreContent.vue:344
 msgid ""
 "Nginx UI configuration has been restored and will restart automatically in "
 "a few seconds."
@@ -4413,7 +4577,7 @@ msgstr "Nginx.conf에는 streams-enabled 디렉토리가 포함됩니다"
 #: src/components/LLM/ChatMessageInput.vue:61
 #: src/components/NamespaceTabs/NamespaceTabs.vue:136
 #: src/components/NamespaceTabs/NamespaceTabs.vue:148
-#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:102
+#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:124
 #: src/components/NgxConfigEditor/LocationEditor.vue:89
 #: src/components/Notification/Notification.vue:115 src/language/curd.ts:40
 #: src/views/notification/Notification.vue:38
@@ -4432,15 +4596,15 @@ msgstr "작업 없음"
 msgid "No certificate available"
 msgstr "사용 가능한 인증서가 없습니다"
 
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:196
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:232
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:227
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:263
 msgid "No China geographic data available"
 msgstr "중국 지리 데이터를 사용할 수 없음"
 
 #: src/composables/useGeoTranslation.ts:169
 #: src/views/dashboard/NginxDashBoard.vue:202
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:127
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:95
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:157
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:125
 msgid "No data"
 msgstr "데이터 없음"
 
@@ -4448,12 +4612,17 @@ msgstr "데이터 없음"
 msgid "No Data"
 msgstr "데이터 없음"
 
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:372
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:666
+msgid "No DNS domains available"
+msgstr "사용 가능한 DNS 도메인이 없습니다"
+
 #: src/views/nginx_log/structured/StructuredLogViewer.vue:827
 msgid "No entries in current page"
 msgstr "현재 페이지에 항목이 없습니다"
 
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:217
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:253
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:250
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:286
 msgid "No geographic data available"
 msgstr "지리 데이터를 사용할 수 없음"
 
@@ -4650,9 +4819,13 @@ msgstr "공식 문서"
 msgid "Offline"
 msgstr "오프라인"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:250
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:248
 msgid "Offline GeoIP analysis"
 msgstr "오프라인 GeoIP 분석"
+
+#: src/views/other/Login.vue:335
+msgid "OIDC Login"
+msgstr "OIDC 로그인"
 
 #: src/components/LLM/ChatMessageInput.vue:62
 #: src/components/NgxConfigEditor/NgxServer.vue:60
@@ -4689,6 +4862,13 @@ msgstr "온라인"
 msgid "Online Count"
 msgstr "온라인 수"
 
+#: src/components/SystemRestore/SystemRestoreContent.vue:180
+#: src/components/SystemRestore/SystemRestoreContent.vue:263
+msgid ""
+"Only backups created by versions that support signed manifests can be "
+"restored. Legacy backups are no longer supported."
+msgstr "서명된 매니페스트를 지원하는 버전에서 생성된 백업만 복원할 수 있습니다. 레거시 백업은 더 이상 지원되지 않습니다."
+
 #: src/components/SystemRestore/SystemRestoreContent.vue:78
 msgid "Only zip files are allowed"
 msgstr "ZIP 파일만 허용됩니다"
@@ -4697,7 +4877,7 @@ msgstr "ZIP 파일만 허용됩니다"
 msgid "Open"
 msgstr "열림"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:287
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:285
 msgid "Open Source Limitation"
 msgstr "오픈 소스 제한"
 
@@ -4713,7 +4893,11 @@ msgstr "운영 체제"
 msgid "Operating System Statistics"
 msgstr "운영 체계 통계"
 
-#: src/components/TwoFA/Authorization.vue:100 src/views/other/Login.vue:326
+#: src/views/dns/components/DNSRecordForm.vue:94
+msgid "Optional comment for this DNS record"
+msgstr "이 DNS 레코드에 대한 선택적 설명"
+
+#: src/components/TwoFA/Authorization.vue:100 src/views/other/Login.vue:369
 msgid "Or"
 msgstr "또는"
 
@@ -4783,7 +4967,7 @@ msgstr "파라미터"
 msgid "Params Optimization"
 msgstr "매개변수 최적화"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:74
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:73
 msgid "Parser Performance"
 msgstr "파서 성능"
 
@@ -4800,7 +4984,7 @@ msgstr ""
 "패스키는 터치, 얼굴 인식, 기기 비밀번호 또는 PIN을 사용하여 신원을 확인하는 웹인증(WebAuthn) 자격 증명입니다. 비밀번호 "
 "대체 또는 2FA 방법으로 사용할 수 있습니다."
 
-#: src/views/other/Login.vue:278 src/views/user/userColumns.tsx:16
+#: src/views/other/Login.vue:312 src/views/user/userColumns.tsx:16
 msgid "Password"
 msgstr "비밀번호"
 
@@ -4835,7 +5019,7 @@ msgstr "비밀번호가 일치하지 않습니다"
 msgid "Path"
 msgstr "경로"
 
-#: src/constants/errors/backup.ts:62
+#: src/constants/errors/backup.ts:72
 msgid "Path not in granted access paths: {0}"
 msgstr "허용된 접근 경로에 없는 경로: {0}"
 
@@ -4858,13 +5042,13 @@ msgstr "대기 중"
 
 #: src/composables/useGeoTranslation.ts:168
 #: src/views/nginx_log/dashboard/components/BrowserStatsTable.vue:26
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:122
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:152
 #: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:72
 #: src/views/nginx_log/dashboard/components/DeviceStatsTable.vue:25
 #: src/views/nginx_log/dashboard/components/OSStatsTable.vue:26
 #: src/views/nginx_log/dashboard/components/TopUrlsTable.vue:27
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:187
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:87
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:117
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:220
 msgid "Percentage"
 msgstr "백분율"
 
@@ -4903,6 +5087,17 @@ msgstr "PID 경로가 존재하지 않습니다"
 #: src/constants/errors/crypto.ts:2
 msgid "Plain text is empty"
 msgstr "평문이 비어 있습니다"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:373
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:667
+msgid "Please add a DNS domain first in the DNS management section."
+msgstr "DNS 관리 섹션에서 먼저 DNS 도메인을 추가하세요"
+
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:446
+msgid ""
+"Please configure server_name directive in the configuration before linking "
+"DNS records."
+msgstr "DNS 레코드를 연결하기 전에 구성에서 server_name 지시문을 설정하십시오."
 
 #: src/views/dashboard/NginxDashBoard.vue:196
 msgid ""
@@ -4944,8 +5139,8 @@ msgstr "OTP 코드를 입력해 주세요:"
 msgid "Please enter the security token"
 msgstr "보안 토큰을 입력해 주세요"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:210
-#: src/components/SystemRestore/SystemRestoreContent.vue:287
+#: src/components/SystemRestore/SystemRestoreContent.vue:212
+#: src/components/SystemRestore/SystemRestoreContent.vue:295
 msgid "Please enter the security token received during backup"
 msgstr "백업 시 받은 보안 토큰을 입력해 주세요"
 
@@ -4956,6 +5151,11 @@ msgstr "서버 IP 주소를 입력해 주세요"
 #: src/language/curd.ts:24
 msgid "Please fill all fields correctly"
 msgstr "모든 필드를 올바르게 작성해 주세요"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:193
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:320
+msgid "Please fill in all required fields"
+msgstr "필수 입력란을 모두 작성해 주세요"
 
 #: src/views/backup/AutoBackup/components/StorageConfigEditor.vue:23
 msgid "Please fill in required S3 configuration fields"
@@ -5075,7 +5275,7 @@ msgstr "포트"
 msgid "Port 80 must be open for HTTP-01 challenge validation"
 msgstr "HTTP-01 챌린지 검증을 위해 포트 80이 열려 있어야 합니다"
 
-#: src/views/site/site_edit/components/RightPanel/RightPanel.vue:56
+#: src/views/site/site_edit/components/RightPanel/RightPanel.vue:60
 #: src/views/stream/components/RightPanel/RightPanel.vue:37
 msgid "Port Scanner"
 msgstr "포트 스캐너"
@@ -5098,8 +5298,8 @@ msgstr "환경설정"
 msgid "Preparing lego configurations"
 msgstr "Lego 설정 준비 중"
 
-#: src/views/dns/components/DNSRecordForm.vue:81
-#: src/views/dns/components/DNSRecordTable.vue:33
+#: src/views/dns/components/DNSRecordForm.vue:82
+#: src/views/dns/components/DNSRecordTable.vue:34
 msgid "Priority"
 msgstr "우선순위"
 
@@ -5132,7 +5332,7 @@ msgstr "프로세스 정보"
 msgid "Processing {count}/{total}"
 msgstr "처리 중 {count}/{total}"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:69
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:68
 msgid "Production Pipeline"
 msgstr "프로덕션 파이프라인"
 
@@ -5164,7 +5364,7 @@ msgid ""
 msgstr "프로토콜 설정은 직접 연결할 때만 적용됩니다. 리버스 프록시를 사용하는 경우 리버스 프록시에서 별도로 프로토콜을 구성하세요."
 
 #: src/views/dns/DDNSManager.vue:70 src/views/dns/DNSCredential.vue:26
-#: src/views/dns/DNSDomainList.vue:177 src/views/dns/DNSDomainList.vue:198
+#: src/views/dns/DNSDomainList.vue:183 src/views/dns/DNSDomainList.vue:204
 msgid "Provider"
 msgstr "제공자"
 
@@ -5176,9 +5376,12 @@ msgstr "공급자를 찾을 수 없음: {0}"
 msgid "Province / Region"
 msgstr "지역 / 지역"
 
-#: src/views/dns/components/DNSRecordForm.vue:87
-#: src/views/dns/components/DNSRecordTable.vue:51
-#: src/views/dns/components/DNSRecordTable.vue:81
+#: src/views/dns/components/DNSRecordForm.vue:88
+#: src/views/dns/components/DNSRecordTable.vue:64
+#: src/views/dns/components/DNSRecordTable.vue:94
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:296
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:475
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:590
 msgid "Proxied"
 msgstr "프록시됨"
 
@@ -5243,7 +5446,7 @@ msgstr "읽기 요청"
 msgid "Reads"
 msgstr "읽기"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:246
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:244
 msgid "Real-time analytics dashboard"
 msgstr "실시간 분석 대시보드"
 
@@ -5272,19 +5475,29 @@ msgstr "수신"
 msgid "Recheck"
 msgstr "재확인"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:151
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:150
 msgid "Recommended:"
 msgstr "권장:"
 
-#: src/views/dns/DNSRecordManager.vue:113
+#: src/views/dns/DNSRecordManager.vue:118
 msgid "Record created"
 msgstr "레코드가 생성되었습니다"
 
-#: src/views/dns/DNSRecordManager.vue:120
+#: src/views/dns/DNSRecordManager.vue:125
 msgid "Record deleted"
 msgstr "레코드 삭제됨"
 
-#: src/views/dns/DNSRecordManager.vue:109
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:325
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:619
+msgid "Record Name"
+msgstr "레코드 이름"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:311
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:605
+msgid "Record Type"
+msgstr "레코드 유형"
+
+#: src/views/dns/DNSRecordManager.vue:114
 msgid "Record updated"
 msgstr "레코드가 업데이트되었습니다"
 
@@ -5306,6 +5519,10 @@ msgid ""
 "2FA device. Each code can only be used once."
 msgstr "복구 코드는 2FA 장치에 대한 접근 권한을 잃었을 때 계정에 접근하는 데 사용됩니다. 각 코드는 한 번만 사용할 수 있습니다."
 
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:535
+msgid "Recreate DNS Record"
+msgstr "DNS 레코드 재생성"
+
 #: src/views/preference/tabs/CertSettings.vue:40
 msgid "Recursive Nameservers"
 msgstr "재귀적 네임서버"
@@ -5320,7 +5537,7 @@ msgid "Referer"
 msgstr "리퍼러"
 
 #: src/language/curd.ts:70 src/views/dns/DDNSManager.vue:161
-#: src/views/dns/DNSRecordManager.vue:165
+#: src/views/dns/DNSRecordManager.vue:170
 msgid "Refresh"
 msgstr "새로 고침"
 
@@ -5583,7 +5800,7 @@ msgstr ""
 "Resident Set Size: 물리적 메모리에 상주하는 실제 메모리로, 모든 공유 라이브러리 메모리를 포함하며, 여러 프로세스에 "
 "대해 반복 계산됩니다"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:110
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:109
 msgid "Resource Usage Warning"
 msgstr "리소스 사용 경고"
 
@@ -5637,18 +5854,18 @@ msgstr "복원이 성공적으로 완료되었습니다"
 msgid "Restore from Backup"
 msgstr "백업에서 복원"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:223
-#: src/components/SystemRestore/SystemRestoreContent.vue:300
+#: src/components/SystemRestore/SystemRestoreContent.vue:225
+#: src/components/SystemRestore/SystemRestoreContent.vue:308
 msgid "Restore Nginx Configuration"
 msgstr "Nginx 설정 복원"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:234
-#: src/components/SystemRestore/SystemRestoreContent.vue:311
+#: src/components/SystemRestore/SystemRestoreContent.vue:236
+#: src/components/SystemRestore/SystemRestoreContent.vue:319
 msgid "Restore Nginx UI Configuration"
 msgstr "Nginx UI 설정 복원"
 
-#: src/components/ConfigHistory/DiffViewer.vue:401
-#: src/components/ConfigHistory/DiffViewer.vue:414
+#: src/components/ConfigHistory/DiffViewer.vue:400
+#: src/components/ConfigHistory/DiffViewer.vue:413
 msgid "Restore this version"
 msgstr "이 버전 복원"
 
@@ -5678,6 +5895,11 @@ msgid ""
 "Revoking a certificate will affect any services currently using it. This "
 "action cannot be undone."
 msgstr "인증서를 취소하면 현재 이를 사용 중인 모든 서비스에 영향을 미칩니다. 이 작업은 취소할 수 없습니다."
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:356
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:650
+msgid "Route traffic through proxy for additional protection and features"
+msgstr "추가 보호 및 기능을 위해 프록시를 통해 트래픽을 라우팅하세요"
 
 #: src/views/preference/tabs/AuthSettings.vue:72
 msgid "RP Display Name"
@@ -5731,7 +5953,7 @@ msgstr "S3 버킷이 필요합니다"
 msgid "S3 bucket name"
 msgstr "S3 버킷 이름"
 
-#: src/constants/errors/backup.ts:56
+#: src/constants/errors/backup.ts:66
 msgid "S3 configuration is incomplete: missing {0}"
 msgstr "S3 구성이 불완전합니다: {0} 누락됨"
 
@@ -5783,7 +6005,7 @@ msgstr "S3 비밀 액세스 키"
 msgid "S3 secret access key is required"
 msgstr "S3 비밀 액세스 키가 필요합니다"
 
-#: src/constants/errors/backup.ts:60
+#: src/constants/errors/backup.ts:70
 msgid "S3 upload failed: {0}"
 msgstr "S3 업로드 실패: {0}"
 
@@ -5792,17 +6014,17 @@ msgid "Saturday"
 msgstr "토요일"
 
 #: src/components/LLM/ChatMessage.vue:244
-#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:132
+#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:164
 #: src/language/curd.ts:18
 #: src/views/certificate/components/CertificateActions.vue:29
 #: src/views/config/components/ConfigLeftPanel.vue:283
 #: src/views/config/components/ConfigName.vue:58
 #: src/views/dashboard/components/SiteHealthCheckModal.vue:713
-#: src/views/dns/DDNSManager.vue:247 src/views/dns/DNSRecordManager.vue:215
+#: src/views/dns/DDNSManager.vue:247 src/views/dns/DNSRecordManager.vue:222
 #: src/views/preference/components/AuthSettings/Passkey.vue:131
 #: src/views/preference/Preference.vue:124
 #: src/views/site/site_edit/components/ConfigName/ConfigName.vue:52
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:190
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:196
 #: src/views/stream/components/ConfigName.vue:52
 #: src/views/stream/components/StreamEditor.vue:154
 msgid "Save"
@@ -5856,14 +6078,14 @@ msgstr "저장 성공"
 
 #: src/language/curd.ts:35 src/views/certificate/CertificateEditor.vue:49
 #: src/views/certificate/components/RenewCert.vue:26
-#: src/views/preference/store/index.ts:124
+#: src/views/preference/store/index.ts:132
 msgid "Save successfully"
 msgstr "성공적으로 저장되었습니다"
 
-#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:48
+#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:51
 #: src/language/curd.ts:28 src/views/config/components/ConfigLeftPanel.vue:198
-#: src/views/site/site_add/SiteAdd.vue:36
-#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:51
+#: src/views/site/site_add/SiteAdd.vue:53
+#: src/views/site/site_edit/components/SiteEditor/SiteEditor.vue:57
 #: src/views/stream/components/StreamEditor.vue:30
 msgid "Saved successfully"
 msgstr "성공적으로 저장됨"
@@ -5904,7 +6126,7 @@ msgstr "일정"
 msgid "Schedule Type"
 msgstr "일정 유형"
 
-#: src/views/dns/components/DNSChallenge.vue:78
+#: src/views/dns/components/DNSChallenge.vue:81
 msgid "SDK"
 msgstr "SDK"
 
@@ -5948,8 +6170,8 @@ msgstr "비밀번호가 복사되었습니다"
 msgid "Security Settings"
 msgstr "보안 설정"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:207
-#: src/components/SystemRestore/SystemRestoreContent.vue:284
+#: src/components/SystemRestore/SystemRestoreContent.vue:209
+#: src/components/SystemRestore/SystemRestoreContent.vue:292
 msgid "Security Token"
 msgstr "보안 토큰"
 
@@ -5970,6 +6192,16 @@ msgstr "모두 선택"
 #: src/language/constants.ts:68
 msgid "Select Credential"
 msgstr "자격 증명 선택"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:254
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:548
+msgid "Select DNS domain"
+msgstr "DNS 도메인 선택"
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:279
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:573
+msgid "Select existing record"
+msgstr "기존 레코드 선택"
 
 #: src/views/certificate/ACMEUser.vue:45
 msgid "Select or enter a CA directory URL"
@@ -6024,6 +6256,10 @@ msgstr "서버 정보"
 #: src/components/AutoCertForm/AutoCertForm.vue:178
 msgid "Server IP Address"
 msgstr "서버 IP 주소"
+
+#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:102
+msgid "Server name is controlled by linked DNS record"
+msgstr "서버 이름은 연결된 DNS 레코드에 의해 제어됩니다"
 
 #: src/views/dashboard/components/ParamsOpt/PerformanceConfig.vue:99
 msgid "Server Names Hash Bucket Size"
@@ -6111,11 +6347,11 @@ msgstr "표시"
 msgid "Show Assistant"
 msgstr "어시스턴트 표시"
 
-#: src/views/other/Login.vue:335
+#: src/views/other/Login.vue:378
 msgid "Sign in with a passkey"
 msgstr "패스키로 로그인"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:76
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:75
 msgid "SIMD-optimized stream processing"
 msgstr "SIMD 최적화 스트림 처리"
 
@@ -6123,9 +6359,13 @@ msgstr "SIMD 최적화 스트림 처리"
 msgid "Single Directive"
 msgstr "단일 지시문"
 
-#: src/views/site/site_add/SiteAdd.vue:137
+#: src/views/site/site_add/SiteAdd.vue:252
 msgid "Site Config Created Successfully"
 msgstr "사이트 설정이 성공적으로 생성되었습니다"
+
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:426
+msgid "Site configuration updated with recreated DNS record"
+msgstr "재생성된 DNS 레코드로 사이트 구성이 업데이트되었습니다"
 
 #: src/constants/errors/site.ts:4
 msgid "Site is enabled"
@@ -6162,8 +6402,8 @@ msgstr "사이트 목록"
 #: src/views/dashboard/SiteNavigation.vue:173
 msgid ""
 "Sites will appear here once you configure nginx server blocks with valid "
-"server_name directives."
-msgstr "유효한 server_name 지시문으로 nginx 서버 블록을 구성하면 사이트가 여기에 표시됩니다."
+"server_name (localhost excluded) directives."
+msgstr "유효한 server_name 지시문(localhost 제외)으로 nginx 서버 블록을 구성하면 사이트가 여기에 표시됩니다."
 
 #: src/constants/errors/self_check.ts:11
 msgid "Sites-available directory not exist"
@@ -6207,7 +6447,7 @@ msgstr "소스 IP"
 msgid "Sponsor"
 msgstr "스폰서"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:62
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:61
 msgid "SSD storage for better I/O performance"
 msgstr "더 나은 I/O 성능을 위한 SSD 저장 장치"
 
@@ -6262,7 +6502,7 @@ msgstr "SSL 키 경로"
 msgid "SSL key path is required when HTTPS is enabled"
 msgstr "HTTPS가 활성화된 경우 SSL 키 경로가 필요합니다"
 
-#: src/views/other/Login.vue:292
+#: src/views/other/Login.vue:326
 msgid "SSO Login"
 msgstr "SSO 로그인"
 
@@ -6279,8 +6519,8 @@ msgstr "시작"
 msgid "Start Date"
 msgstr "시작 날짜"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:246
-#: src/components/SystemRestore/SystemRestoreContent.vue:323
+#: src/components/SystemRestore/SystemRestoreContent.vue:248
+#: src/components/SystemRestore/SystemRestoreContent.vue:331
 msgid "Start Restore"
 msgstr "복원 시작"
 
@@ -6318,7 +6558,7 @@ msgstr "정지됨"
 
 #: src/views/dashboard/ServerAnalytic.vue:258
 #: src/views/dashboard/ServerAnalytic.vue:259
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:60
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:59
 msgid "Storage"
 msgstr "저장소"
 
@@ -6413,8 +6653,8 @@ msgstr "단일 또는 일괄 파일 업로드 지원"
 msgid "Support uploading entire folders"
 msgstr "전체 폴더 업로드 지원"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:197
-#: src/components/SystemRestore/SystemRestoreContent.vue:274
+#: src/components/SystemRestore/SystemRestoreContent.vue:199
+#: src/components/SystemRestore/SystemRestoreContent.vue:282
 msgid "Supported file type: .zip"
 msgstr "지원되는 파일 형식: .zip"
 
@@ -6515,17 +6755,23 @@ msgstr "시스템 점검"
 msgid "System Initial User"
 msgstr "시스템 초기 사용자"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:121
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:120
 msgid "System Requirements"
 msgstr "시스템 요구 사항"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:174
+#: src/components/SystemRestore/SystemRestoreContent.vue:170
 msgid "System Restore"
 msgstr "시스템 복원"
 
 #: src/views/install/components/InstallView.vue:44
 msgid "System restored successfully."
 msgstr "시스템이 성공적으로 복원되었습니다."
+
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:338
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:508
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:632
+msgid "target.example.com"
+msgstr "target.example.com"
 
 #: src/views/dns/DDNSManager.vue:83
 msgid "Targets"
@@ -6614,6 +6860,12 @@ msgstr "입력이 SSL 인증서가 아닙니다"
 msgid "The input is not a SSL Certificate Key"
 msgstr "입력한 내용이 SSL 인증서 키가 아닙니다"
 
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:498
+msgid ""
+"The linked DNS record was deleted from the DNS server. You can recreate it "
+"or clear the link."
+msgstr "연결된 DNS 레코드가 DNS 서버에서 삭제되었습니다. 다시 만들거나 링크를 지울 수 있습니다."
+
 #: src/constants/errors/nginx_log.ts:2
 msgid ""
 "The log path is not under the paths in "
@@ -6637,7 +6889,8 @@ msgid ""
 "dashes, colons, and dots."
 msgstr "노드 이름에는 문자, 유니코드, 숫자, 하이픈, 대시, 콜론 및 점만 포함되어야 합니다."
 
-#: src/views/site/site_add/SiteAdd.vue:96
+#: src/views/site/site_add/SiteAdd.vue:186
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:445
 msgid "The parameter of server_name is required"
 msgstr "server_name 매개변수가 필요합니다"
 
@@ -6708,6 +6961,12 @@ msgstr "서드파티 컴포넌트"
 #: src/views/certificate/components/AutoCertManagement.vue:45
 msgid "This Auto Cert item is invalid, please remove it."
 msgstr "이 자동 인증 항목이 유효하지 않습니다. 제거해주세요."
+
+#: src/constants/errors/backup.ts:62
+msgid ""
+"This backup uses an unsupported legacy format. Please create a new backup "
+"with a newer version before restoring."
+msgstr "이 백업은 지원되지 않는 레거시 형식을 사용합니다. 복원하기 전에 새 버전으로 새 백업을 생성하십시오."
 
 #: src/views/certificate/components/AutoCertManagement.vue:35
 msgid "This certificate is managed by Nginx UI"
@@ -6813,15 +7072,15 @@ msgstr ""
 msgid "This will rebuild the index data for this specific file: %{path}"
 msgstr "이 특정 파일에 대한 인덱스 데이터를 다시 생성합니다: %{path}"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:227
-#: src/components/SystemRestore/SystemRestoreContent.vue:304
+#: src/components/SystemRestore/SystemRestoreContent.vue:229
+#: src/components/SystemRestore/SystemRestoreContent.vue:312
 msgid ""
 "This will restore all Nginx configuration files. Nginx will restart after "
 "the restoration is complete."
 msgstr "이렇게 하면 모든 Nginx 구성 파일이 복원됩니다. 복원이 완료된 후 Nginx가 재시작됩니다."
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:238
-#: src/components/SystemRestore/SystemRestoreContent.vue:315
+#: src/components/SystemRestore/SystemRestoreContent.vue:240
+#: src/components/SystemRestore/SystemRestoreContent.vue:323
 msgid ""
 "This will restore configuration files and database. Nginx UI will restart "
 "after the restoration is complete."
@@ -6923,13 +7182,13 @@ msgstr "토큰이 비어 있습니다"
 msgid "Token is not valid"
 msgstr "토큰이 유효하지 않습니다"
 
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:236
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:272
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:269
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:305
 msgid "Top 10 Countries / Regions"
 msgstr "상위 10개 국가/지역"
 
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:215
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:251
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:246
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:282
 msgid "Top 10 Provinces / Regions"
 msgstr "상위 10개 지역"
 
@@ -7022,11 +7281,14 @@ msgstr "검색 조건을 조정하거나 다른 페이지로 이동해 보세요
 msgid "Try adjusting your search criteria or time range."
 msgstr "검색 조건이나 시간 범위를 조정해 보세요."
 
-#: src/views/dns/components/DNSRecordTable.vue:29
+#: src/views/dns/components/DNSRecordTable.vue:30
 msgid "TTL"
 msgstr "TTL"
 
-#: src/views/dns/components/DNSRecordForm.vue:78
+#: src/views/dns/components/DNSRecordForm.vue:79
+#: src/views/site/site_add/components/DNSRecordIntegration.vue:342
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:511
+#: src/views/site/site_edit/components/RightPanel/DNS.vue:636
 msgid "TTL (seconds)"
 msgstr "TTL (초)"
 
@@ -7043,8 +7305,8 @@ msgstr "2단계 인증이 필요합니다"
 #: src/views/config/components/Delete.vue:122
 #: src/views/dashboard/components/ModulesTable.vue:62
 #: src/views/dns/components/DNSRecordFilter.vue:49
-#: src/views/dns/components/DNSRecordForm.vue:57
-#: src/views/dns/components/DNSRecordTable.vue:21
+#: src/views/dns/components/DNSRecordForm.vue:58
+#: src/views/dns/components/DNSRecordTable.vue:22
 #: src/views/nginx_log/NginxLogList.vue:146
 #: src/views/notification/notificationColumns.tsx:8
 #: src/views/preference/components/ExternalNotify/columns.tsx:19
@@ -7088,7 +7350,7 @@ msgstr "고유 페이지"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: src/constants/errors/backup.ts:57
+#: src/constants/errors/backup.ts:67
 msgid "Unsupported backup type: {0}"
 msgstr "지원되지 않는 백업 유형: {0}"
 
@@ -7116,7 +7378,7 @@ msgstr "성공적으로 업데이트되었습니다"
 #: src/views/certificate/ACMEUser.vue:124
 #: src/views/config/components/ConfigRightPanel/Basic.vue:54
 #: src/views/config/configColumns.tsx:44 src/views/dns/DNSCredential.vue:65
-#: src/views/dns/DNSDomainList.vue:205 src/views/namespace/columns.ts:91
+#: src/views/dns/DNSDomainList.vue:211 src/views/namespace/columns.ts:91
 #: src/views/node/nodeColumns.tsx:89
 #: src/views/site/site_edit/components/RightPanel/Basic.vue:39
 #: src/views/site/site_list/columns.tsx:113 src/views/stream/columns.tsx:80
@@ -7189,7 +7451,7 @@ msgstr "가동 시간:"
 msgid "URL"
 msgstr "URL"
 
-#: src/views/dns/components/DNSRecordForm.vue:64
+#: src/views/dns/components/DNSRecordForm.vue:65
 msgid "Use @ for root"
 msgstr "루트에는 @ 사용"
 
@@ -7230,7 +7492,7 @@ msgstr "사용자가 OTP를 2FA로 활성화하지 않음"
 msgid "User Profile"
 msgstr "사용자 프로필"
 
-#: src/views/other/Login.vue:268 src/views/user/userColumns.tsx:7
+#: src/views/other/Login.vue:302 src/views/user/userColumns.tsx:7
 #: src/views/user/UserProfile.vue:127 src/views/user/UserProfile.vue:131
 msgid "Username"
 msgstr "사용자 이름"
@@ -7258,15 +7520,15 @@ msgid "Validate SSL Certificate"
 msgstr "SSL 인증서 검증"
 
 #: src/views/dashboard/components/PerformanceTablesCard.vue:22
-#: src/views/dns/components/DNSRecordForm.vue:66
-#: src/views/dns/components/DNSRecordTable.vue:25
+#: src/views/dns/components/DNSRecordForm.vue:67
+#: src/views/dns/components/DNSRecordTable.vue:26
 msgid "Value"
 msgstr "값"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:216
-#: src/components/SystemRestore/SystemRestoreContent.vue:293
-msgid "Verify Backup File Integrity"
-msgstr "백업 파일 무결성 확인"
+#: src/components/SystemRestore/SystemRestoreContent.vue:218
+#: src/components/SystemRestore/SystemRestoreContent.vue:301
+msgid "Verify Backup File Integrity (required)"
+msgstr "백업 파일 무결성 확인 (필수)"
 
 #: src/views/dashboard/components/SiteHealthCheckModal.vue:664
 msgid "Verify Hostname"
@@ -7308,13 +7570,13 @@ msgid "Viewed"
 msgstr "확인됨"
 
 #: src/composables/useGeoTranslation.ts:167
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:121
-#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:146
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:151
+#: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:176
 #: src/views/nginx_log/dashboard/components/ChinaMapChart/ChinaMapChart.vue:64
 #: src/views/nginx_log/dashboard/components/TopUrlsTable.vue:19
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:114
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:179
-#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:86
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:116
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:144
+#: src/views/nginx_log/dashboard/components/WorldMapChart/WorldMapChart.vue:212
 msgid "Visits"
 msgstr "방문 수"
 
@@ -7330,8 +7592,8 @@ msgstr "대기 과정"
 msgid "Warning"
 msgstr "경고"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:178
-#: src/components/SystemRestore/SystemRestoreContent.vue:255
+#: src/components/SystemRestore/SystemRestoreContent.vue:174
+#: src/components/SystemRestore/SystemRestoreContent.vue:257
 msgid ""
 "Warning: Restore operation will overwrite current configurations. Make sure "
 "you have a valid backup file and security token, and carefully select what "
@@ -7347,7 +7609,7 @@ msgstr ""
 "경고: 이 주소는 사설 IP 주소로 보입니다. Let's Encrypt와 같은 공인 인증 기관은 사설 IP에 대한 인증서를 발급할 수 "
 "없습니다. 공인 IP 주소를 사용하거나 사설 인증 기관 사용을 고려해 보세요."
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:300
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:298
 msgid "We do not accept any feature requests"
 msgstr "기능 요청을 받지 않습니다"
 
@@ -7385,8 +7647,8 @@ msgstr "매주"
 msgid "Weekly on %{day} at %{time}"
 msgstr "매주 %{day} %{time}"
 
-#: src/views/dns/components/DNSRecordForm.vue:84
-#: src/views/dns/components/DNSRecordTable.vue:37
+#: src/views/dns/components/DNSRecordForm.vue:85
+#: src/views/dns/components/DNSRecordTable.vue:38
 msgid "Weight"
 msgstr "가중치"
 
@@ -7463,7 +7725,7 @@ msgstr "인증서를 디스크에 쓰기"
 
 #: src/components/NamespaceTabs/NamespaceTabs.vue:135
 #: src/components/NamespaceTabs/NamespaceTabs.vue:147
-#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:101
+#: src/components/NgxConfigEditor/directive/DirectiveEditorItem.vue:123
 #: src/components/NgxConfigEditor/LocationEditor.vue:88
 #: src/views/nginx_log/indexing/IndexManagement.vue:31
 #: src/views/nginx_log/indexing/IndexManagement.vue:57
@@ -7472,7 +7734,7 @@ msgstr "인증서를 디스크에 쓰기"
 msgid "Yes"
 msgstr "예"
 
-#: src/views/terminal/Terminal.vue:200
+#: src/views/terminal/Terminal.vue:219
 msgid ""
 "You are accessing this terminal over an insecure HTTP connection on a "
 "non-localhost domain. This may expose sensitive information."
@@ -7492,11 +7754,11 @@ msgstr "최신 버전을 사용하고 있습니다"
 msgid "You can check Nginx UI upgrade at this page."
 msgstr "이 페이지에서 Nginx UI 업그레이드를 확인할 수 있습니다."
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:339
+#: src/components/SystemRestore/SystemRestoreContent.vue:347
 msgid "You can close this dialog in %{countdown} seconds"
 msgstr "이 대화 상자는 %{countdown}초 후에 닫을 수 있습니다"
 
-#: src/components/SystemRestore/SystemRestoreContent.vue:342
+#: src/components/SystemRestore/SystemRestoreContent.vue:350
 msgid "You can close this dialog now"
 msgstr "이제 이 대화 상자를 닫을 수 있습니다"
 
@@ -7529,9 +7791,12 @@ msgstr "이전 코드는 더 이상 작동하지 않습니다."
 msgid "Your passkeys"
 msgstr "귀하의 패스키"
 
-#: src/views/nginx_log/components/IndexingSettingsModal.vue:234
+#: src/views/nginx_log/components/IndexingSettingsModal.vue:232
 msgid "Zero-allocation pipeline"
 msgstr "할당 없는 파이프라인"
+
+#~ msgid "Backup file integrity check failed, it may have been tampered with"
+#~ msgstr "백업 파일 무결성 검사에 실패했습니다. 파일이 변조되었을 수 있습니다"
 
 #~ msgid "Once the verification is complete, the records will be removed."
 #~ msgstr "검증이 완료되면, 레코드는 제거됩니다."
@@ -7818,9 +8083,6 @@ msgstr "할당 없는 파이프라인"
 #, fuzzy
 #~ msgid "AutoCert is running, please wait"
 #~ msgstr "이 자동 인증 항목이 유효하지 않습니다. 제거해주세요."
-
-#~ msgid "Automatically indexed from site and stream configurations."
-#~ msgstr "\"사이트 및 스트림 구성에서 자동으로 인덱싱되었습니다.\""
 
 #, fuzzy
 #~ msgid "Nginx Conf Include Conf.d"

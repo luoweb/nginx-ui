@@ -1,18 +1,17 @@
 package terminal
 
 import (
+	"github.com/0xJacky/Nginx-UI/internal/middleware"
 	"github.com/0xJacky/Nginx-UI/internal/pty"
+	"github.com/0xJacky/Nginx-UI/settings"
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
 	"github.com/uozi-tech/cosy/logger"
-	"net/http"
 )
 
 func Pty(c *gin.Context) {
 	var upGrader = websocket.Upgrader{
-		CheckOrigin: func(r *http.Request) bool {
-			return true
-		},
+		CheckOrigin: middleware.CheckWebSocketOrigin,
 	}
 	// upgrade http to websocket
 	ws, err := upGrader.Upgrade(c.Writer, c.Request, nil)
@@ -23,7 +22,12 @@ func Pty(c *gin.Context) {
 
 	defer ws.Close()
 
-	p, err := pty.NewPipeLine(ws)
+	var p pty.Runner
+	if settings.NodeSettings.Demo {
+		p, err = pty.NewRestrictedPipeline(ws)
+	} else {
+		p, err = pty.NewPipeLine(ws)
+	}
 
 	if err != nil {
 		logger.Error(err)
@@ -41,6 +45,4 @@ func Pty(c *gin.Context) {
 	if err != nil {
 		logger.Error(err)
 	}
-
-	return
 }
