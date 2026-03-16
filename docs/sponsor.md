@@ -18,6 +18,16 @@ Support us through Afdian, a popular Chinese crowdfunding platform.
 
 [**在爱发电上支持我们 →**](https://afdian.com/a/nginxui)
 
+## Official Community Group
+
+Welcome to join the official Nginx UI WeChat community group to discuss usage, deployment ideas, and troubleshooting with other community members.
+
+Scan the QR code below to add us on WeChat, and include `Nginx UI Community Group` in your request. The administrator will invite you to the official community group.
+
+<p align="center">
+  <img src="/assets/wechat-community-qr.png" alt="Nginx UI official WeChat community QR code" width="320">
+</p>
+
 ## Why Sponsor?
 
 Your sponsorship helps us:
