@@ -13,11 +13,11 @@ export function buildWebSocketUrl(url: string, token: string, shortToken: string
   // Use shortToken if available (without base64 encoding), otherwise use regular token (with base64 encoding)
   const authParam = shortToken ? `token=${shortToken}` : `token=${btoa(token)}`
 
-  // In development mode, connect directly to backend server
+  // In development mode, keep WebSocket same-origin so the browser
+  // connects through the dev server instead of the private backend port.
   if (import.meta.env.DEV) {
-    const proxyTarget = import.meta.env.VITE_PROXY_TARGET || 'http://localhost:9000'
-    const wsTarget = proxyTarget.replace(/^https?:/, location.protocol === 'https:' ? 'wss:' : 'ws:')
-    return urlJoin(wsTarget, url, `?${authParam}`, node_id)
+    const protocol = location.protocol === 'https:' ? 'wss://' : 'ws://'
+    return urlJoin(protocol + window.location.host, url, `?${authParam}`, node_id)
   }
 
   // In production mode, use current host
@@ -37,10 +37,12 @@ export function useWebSocket<T = any>(
   reconnect: boolean = true,
   options?: Omit<UseWebSocketOptions, 'autoReconnect'>,
 ): UseWebSocketReturn<T> {
-  const user = useUserStore()
+  const userStore = useUserStore()
   const settings = useSettingsStore()
-  const { token, shortToken } = storeToRefs(user)
+  const { token, shortToken } = storeToRefs(userStore)
 
+  // Snapshot the URL at call time — must NOT be reactive to avoid
+  // tearing down in-flight connections when shortToken arrives later.
   const wsUrl = buildWebSocketUrl(url, token.value, shortToken.value, settings.node.id)
 
   return vueUseWebSocket<T>(wsUrl, {
