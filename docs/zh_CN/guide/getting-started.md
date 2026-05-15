@@ -39,6 +39,21 @@ http {
 
 此外，我们提供了一个使用 Nginx 反向代理 Nginx UI 的 [示例](./nginx-proxy-example)，您可在安装完成后使用。
 
+### 获取安装 Secret
+
+首次启动时，Nginx UI 会要求输入一次性的安装 Secret，网页安装流程才能继续。
+这个 Secret 保存在与 `app.ini` 同目录下的隐藏文件 `.install_secret` 中。
+
+不同安装方式下，获取 Secret 的方式如下：
+
+- **Linux 安装脚本**：脚本会在服务启动后直接把 Secret 打印到终端。如果错过了，可以读取 `$DATA_PATH/.install_secret`，默认路径是 `/usr/local/etc/nginx-ui/.install_secret`。
+- **Homebrew**：在 `app.ini` 所在目录读取 `.install_secret`，例如 `/opt/homebrew/etc/nginx-ui/.install_secret`、`/usr/local/etc/nginx-ui/.install_secret` 或 `/home/linuxbrew/.linuxbrew/etc/nginx-ui/.install_secret`。
+- **Docker / Docker Compose**：在宿主机上映射到 `/etc/nginx-ui` 的目录中读取 `.install_secret`。如果没有挂载该目录，可以执行 `docker exec <容器名> cat /etc/nginx-ui/.install_secret`。
+- **Winget**：在 `app.ini` 所在目录读取 `.install_secret`，通常是 `%LOCALAPPDATA%\nginx-ui\.install_secret` 或 `C:\ProgramData\nginx-ui\.install_secret`。
+- **直接运行可执行文件 / 手动构建**：在通过 `-config` 指定的配置文件所在目录读取 `.install_secret`。
+
+这个 Secret 只在首次安装窗口期内有效；安装完成或超时后会被自动删除。
+
 ## 使用 Homebrew 安装
 
 对于 macOS 和 Linux 用户，您可以使用 Homebrew 安装 Nginx UI，这是最简单的安装方式。
@@ -107,7 +122,9 @@ brew untap 0xjacky/tools
 
 ::: tip 提示
 
-默认情况下，Nginx UI 会被反向代理到容器的 `8080` 端口。
+官方 Docker 镜像监听容器的 `80` 和 `443` 端口。
+对容器 `80` 端口的请求会被反向代理到 `127.0.0.1:9000` 上的 Nginx UI 后端。
+请通过映射到容器 `80` 端口的宿主机端口访问 Nginx UI。
 首次使用时，映射到 `/etc/nginx` 的目录必须为空文件夹。
 如果你想要托管静态文件，可以直接将文件夹映射入容器中。
 

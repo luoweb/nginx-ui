@@ -146,7 +146,10 @@ async function onchange(status: boolean) {
     ngxConfig.value.servers.forEach(v => {
       v.locations = v?.locations?.filter(l => l.path !== '/.well-known/acme-challenge')
     })
-    await editorStore.save()
+    // Skip syncing the response so handleResponse() does not overwrite
+    // our local autoCert back to the backend's still-enabled state, which
+    // would leave the switch showing on until a page reload.
+    await editorStore.save({ syncResponse: false })
     changeAutoCert(status)
   }
 
@@ -163,6 +166,11 @@ async function job() {
 
     return
   }
+
+  // Wait for Vue to mount ObtainCertLive after step transitions to 2; without
+  // this tick refObtainCertLive.value is still null and issueCert() silently
+  // no-ops via its optional-chain call.
+  await nextTick()
 
   issueCert()
 }
@@ -199,7 +207,7 @@ const canNext = computed(() => {
     return true
   }
   else if (data.value.challenge_method === AutoCertChallengeMethod.dns01) {
-    return data.value?.code ?? false
+    return Boolean(data.value.dns_credential_id)
   }
   return false
 })

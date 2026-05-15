@@ -1,28 +1,66 @@
 import type { UseWebSocketOptions, UseWebSocketReturn } from '@vueuse/core'
 import { useWebSocket as vueUseWebSocket } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
-import { urlJoin } from '@/lib/helper'
 import { useSettingsStore, useUserStore } from '@/pinia'
+
+function normalizeWebSocketEndpoint(url: string): string {
+  if (/^[a-z][a-z\d+\-.]*:\/\//i.test(url) || url.startsWith('//')) {
+    return url
+  }
+
+  return url.replace(/^\/+/, '')
+}
+
+function buildWebSocketBaseUrl(protocol: string): string {
+  if (import.meta.env.DEV) {
+    return `${protocol}//${window.location.host}/`
+  }
+
+  const baseUrl = new URL('./', window.location.href)
+  baseUrl.protocol = protocol
+  baseUrl.search = ''
+  baseUrl.hash = ''
+
+  return baseUrl.toString()
+}
 
 /**
  * Build WebSocket URL based on environment
  */
 export function buildWebSocketUrl(url: string, token: string, shortToken: string, nodeId?: number): string {
-  const node_id = nodeId && nodeId > 0 ? `&x_node_id=${nodeId}` : ''
+  return buildWebSocketUrlWithQuery(url, token, shortToken, undefined, nodeId)
+}
 
-  // Use shortToken if available (without base64 encoding), otherwise use regular token (with base64 encoding)
-  const authParam = shortToken ? `token=${shortToken}` : `token=${btoa(token)}`
+export function buildWebSocketUrlWithQuery(
+  url: string,
+  token: string,
+  shortToken: string,
+  extraQuery?: Record<string, string | undefined>,
+  nodeId?: number,
+): string {
+  const protocol = location.protocol === 'https:' ? 'wss:' : 'ws:'
+  const basePath = buildWebSocketBaseUrl(protocol)
 
-  // In development mode, keep WebSocket same-origin so the browser
-  // connects through the dev server instead of the private backend port.
-  if (import.meta.env.DEV) {
-    const protocol = location.protocol === 'https:' ? 'wss://' : 'ws://'
-    return urlJoin(protocol + window.location.host, url, `?${authParam}`, node_id)
+  const wsUrl = new URL(normalizeWebSocketEndpoint(url), basePath)
+
+  // Use shortToken if available (without base64 encoding), otherwise use regular token (URL-safe base64).
+  // URL-safe base64 avoids `+` chars that get decoded as spaces in query strings.
+  const longTokenParam = btoa(token).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
+  wsUrl.searchParams.set('token', shortToken || longTokenParam)
+
+  if (nodeId && nodeId > 0) {
+    wsUrl.searchParams.set('x_node_id', String(nodeId))
   }
 
-  // In production mode, use current host
-  const protocol = location.protocol === 'https:' ? 'wss://' : 'ws://'
-  return urlJoin(protocol + window.location.host, window.location.pathname, url, `?${authParam}`, node_id)
+  if (extraQuery) {
+    Object.entries(extraQuery).forEach(([key, value]) => {
+      if (value) {
+        wsUrl.searchParams.set(key, value)
+      }
+    })
+  }
+
+  return wsUrl.toString()
 }
 
 /**
@@ -36,14 +74,22 @@ export function useWebSocket<T = any>(
   url: string,
   reconnect: boolean = true,
   options?: Omit<UseWebSocketOptions, 'autoReconnect'>,
+  extraQuery?: Record<string, string | undefined>,
 ): UseWebSocketReturn<T> {
   const userStore = useUserStore()
   const settings = useSettingsStore()
   const { token, shortToken } = storeToRefs(userStore)
 
-  // Snapshot the URL at call time — must NOT be reactive to avoid
-  // tearing down in-flight connections when shortToken arrives later.
-  const wsUrl = buildWebSocketUrl(url, token.value, shortToken.value, settings.node.id)
+  // Snapshot the URL at call time — must NOT be reactive to avoid tearing down
+  // in-flight connections (e.g. terminal, log tail) when shortToken arrives later.
+  // When shortToken is empty we fall back to the URL-safe base64 long token,
+  // which the backend still accepts. We deliberately do NOT trigger
+  // fetchShortToken() here: /token/short can return 403 if the secure-session
+  // cookie is stale, and the global HTTP interceptor turns any 403 into a
+  // forced logout — which would kick out otherwise-valid sessions on any
+  // WebSocket-backed page. Short-token refresh is handled by the user store's
+  // token watcher (see app/src/pinia/moudule/user.ts).
+  const wsUrl = buildWebSocketUrlWithQuery(url, token.value, shortToken.value, extraQuery, settings.node.id)
 
   return vueUseWebSocket<T>(wsUrl, {
     autoReconnect: reconnect
