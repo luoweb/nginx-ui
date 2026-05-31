@@ -3,6 +3,7 @@ package cron
 import (
 	"context"
 
+	"github.com/0xJacky/Nginx-UI/internal/cert"
 	"github.com/go-co-op/gocron/v2"
 	"github.com/uozi-tech/cosy/logger"
 )
@@ -20,6 +21,12 @@ func init() {
 
 // InitCronJobs initializes and starts all cron jobs
 func InitCronJobs(ctx context.Context) {
+	// Sweep any cert rows still marked "pending" — they belong to an
+	// issuance that was killed by the previous shutdown.
+	if err := cert.SweepStalePending(); err != nil {
+		logger.Errorf("SweepStalePending Err: %v\n", err)
+	}
+
 	// Initialize auto cert job
 	_, err := setupAutoCertJob(s)
 	if err != nil {
@@ -30,6 +37,12 @@ func InitCronJobs(ctx context.Context) {
 	_, err = setupCertExpiredJob(s)
 	if err != nil {
 		logger.Fatalf("CertExpired Err: %v\n", err)
+	}
+
+	// Initialize self-signed certificate renewal job
+	_, err = setupSelfSignedCertRenewalJob(s)
+	if err != nil {
+		logger.Fatalf("SelfSignedCertRenewal Err: %v\n", err)
 	}
 
 	// Start logrotate job

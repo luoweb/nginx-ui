@@ -1,9 +1,9 @@
 import type { CustomRenderArgs, StdTableColumn } from '@uozi-admin/curd'
 import type { JSXElements } from '@/types'
-import { datetimeRender, maskRender } from '@uozi-admin/curd'
-import { Badge, Tag } from 'ant-design-vue'
+import { datetimeRender } from '@uozi-admin/curd'
+import { Badge, Tag, Tooltip } from 'ant-design-vue'
 import dayjs from 'dayjs'
-import { PrivateKeyTypeMask } from '@/constants'
+import { AutoCertState, formatPrivateKeyType } from '@/constants'
 
 const columns: StdTableColumn[] = [{
   title: () => $gettext('Name'),
@@ -28,17 +28,25 @@ const columns: StdTableColumn[] = [{
     const sync = $gettext('Sync Certificate')
     const managed = $gettext('Managed Certificate')
     const general = $gettext('General Certificate')
-    if (text === true || text === 1) {
+    const selfSigned = $gettext('Self-signed Certificate')
+    if (text === true || text === AutoCertState.Enable) {
       template.push(
         <Tag bordered={false} color="processing">
           {managed}
         </Tag>,
       )
     }
-    else if (text === 2) {
+    else if (text === AutoCertState.Sync) {
       template.push(
         <Tag bordered={false} color="success">
           {sync}
+        </Tag>,
+      )
+    }
+    else if (text === AutoCertState.SelfSigned) {
+      template.push(
+        <Tag bordered={false} color="cyan">
+          {selfSigned}
         </Tag>,
       )
     }
@@ -56,31 +64,44 @@ const columns: StdTableColumn[] = [{
 }, {
   title: () => $gettext('Key Type'),
   dataIndex: 'key_type',
-  customRender: maskRender(PrivateKeyTypeMask),
+  customRender: ({ text }: CustomRenderArgs) => formatPrivateKeyType(text),
   sorter: true,
   pure: true,
 }, {
   title: () => $gettext('Status'),
-  dataIndex: 'certificate_info',
+  dataIndex: 'status',
   pure: true,
   customRender: (args: CustomRenderArgs) => {
-    const template: JSXElements = []
-
-    const text = args.text?.not_before
-      && args.text?.not_after
-      && !dayjs().isBefore(args.text?.not_before)
-      && !dayjs().isAfter(args.text?.not_after)
-
-    if (text) {
-      template.push(<Badge status="success" />)
-      template.push(h('span', $gettext('Valid')))
+    const { record } = args
+    if (record.status === 'pending') {
+      return h('div', [
+        h(Badge, { status: 'processing' }),
+        h('span', $gettext('Issuing...')),
+      ])
     }
-    else {
-      template.push(<Badge status="error" />)
-      template.push(h('span', $gettext('Expired')))
+    if (record.status === 'failure') {
+      const errorMsg = record.last_error || $gettext('Issuance failed')
+      return h(Tooltip, { title: errorMsg }, () =>
+        h('div', [
+          h(Badge, { status: 'error' }),
+          h('span', $gettext('Failed')),
+        ]))
     }
-
-    return h('div', template)
+    const info = record.certificate_info
+    const valid = info?.not_before
+      && info?.not_after
+      && !dayjs().isBefore(info.not_before)
+      && !dayjs().isAfter(info.not_after)
+    if (valid) {
+      return h('div', [
+        h(Badge, { status: 'success' }),
+        h('span', $gettext('Valid')),
+      ])
+    }
+    return h('div', [
+      h(Badge, { status: 'error' }),
+      h('span', $gettext('Expired')),
+    ])
   },
 }, {
   title: () => $gettext('Not After'),

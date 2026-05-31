@@ -20,6 +20,7 @@ RUN case "${TARGETARCH}/${TARGETVARIANT}" in \
         "arm/v7"*) S6_ARCH="arm" ;; \
         "arm/v6"*) S6_ARCH="arm" ;; \
         "arm/v5"*) S6_ARCH="arm" ;; \
+        "riscv64/"*) S6_ARCH="riscv64" ;; \
         *) echo "Unsupported arch: ${TARGETARCH}/${TARGETVARIANT}" && exit 1 ;; \
     esac && \
     wget -O /tmp/s6-overlay-noarch.tar.xz https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-noarch.tar.xz && \
@@ -58,6 +59,7 @@ RUN echo 'longrun' > /etc/s6-overlay/s6-rc.d/nginx-ui/type && \
 # copy nginx config
 COPY resources/docker/nginx.conf /usr/local/etc/nginx/nginx.conf
 COPY resources/docker/nginx-ui.conf /usr/local/etc/nginx/conf.d/nginx-ui.conf
+COPY resources/docker/nginx-ui.conf.known-hashes /usr/local/share/nginx-ui/nginx-ui.conf.known-hashes
 
 # copy nginx-ui executable binary
 COPY nginx-ui-$TARGETOS-$TARGETARCH$TARGETVARIANT/nginx-ui /usr/local/bin/nginx-ui
